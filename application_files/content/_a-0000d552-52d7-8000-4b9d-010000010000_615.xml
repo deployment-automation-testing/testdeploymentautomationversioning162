@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
-    <rulesFolder>
-        <name>Reports</name>
-        <uuid>_a-0000d6fd-7cb9-8000-7886-010000010000_951</uuid>
+    <constant>
+        <name>commiticon</name>
+        <uuid>_a-0000d552-52d7-8000-4b9d-010000010000_615</uuid>
         <description></description>
-        <parentUuid>_a-0000d516-ce42-8000-11d1-010000010000_542</parentUuid>
+        <parentUuid>_a-0000d552-52d7-8000-4b9d-010000010000_614</parentUuid>
         <visibility>
             <advertise>false</advertise>
             <hierarchy>true</hierarchy>
@@ -14,7 +14,14 @@
             <system>false</system>
             <unlogged>false</unlogged>
         </visibility>
-    </rulesFolder>
+        <typedValue>
+            <type>
+                <name>CollaborationDocument</name>
+                <namespace>http://www.appian.com/ae/types/2009</namespace>
+            </type>
+            <value>_a-0000d552-52d7-8000-4b9d-010000010000_611</value>
+        </typedValue>
+    </constant>
     <roleMap public="true">
         <role allowForAll="false" inherit="true" name="readers">
             <users/>

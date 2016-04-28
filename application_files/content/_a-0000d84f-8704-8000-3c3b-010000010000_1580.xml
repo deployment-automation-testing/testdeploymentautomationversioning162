@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <rule>
+        <name>dynamic_ImageField</name>
+        <uuid>_a-0000d84f-8704-8000-3c3b-010000010000_1580</uuid>
+        <description></description>
+        <parentUuid>_a-0000d84f-8704-8000-3c3b-010000010000_1561</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>= load(
+  local!imageField_label: &quot;label&quot;,
+  local!imageField_instructions: &quot;instructions&quot;,
+  local!imageField_source: &quot;http://www.appian.com/export/images/ap_logo.png&quot;,
+  local!imageField_altText: &quot;alt Text&quot;,  
+  with(
+		
+		#&quot;SYSTEM_SYSRULES_sectionLayoutColumns&quot;(
+          label: &quot;Dynamic Sail Component&quot;,
+          columns: {
+            #&quot;SYSTEM_SYSRULES_columnLayout&quot;(
+              contents: {
+                #&quot;SYSTEM_SYSRULES_textField&quot;(
+                  label: &quot;Label&quot;,
+                  instructions: &quot;Enter text for the dynamic Label value&quot;,
+                  required: false,
+                  readOnly: false,
+                  disabled: false,
+                  value: local!imageField_label,
+                  saveInto: local!imageField_label
+                ),
+                #&quot;SYSTEM_SYSRULES_textField&quot;(
+                  label: &quot;Instructions&quot;,
+                  instructions: &quot;Enter text for the dynamic Instructions value&quot;,
+                  required: false,
+                  readOnly: false,
+                  disabled: false,
+                  value: local!imageField_instructions,
+                  saveInto: local!imageField_instructions
+                ),               
+                #&quot;SYSTEM_SYSRULES_textField&quot;(
+                  label: &quot;Source&quot;,
+                  instructions: &quot;Enter SafeURI for the dynamic Source value&quot;,
+                  required: false,
+                  readOnly: false,
+                  disabled: false,
+                  value: local!imageField_source,
+                  saveInto: local!imageField_source
+                ),
+				#&quot;SYSTEM_SYSRULES_textField&quot;(
+                  label: &quot;AltText&quot;,
+                  instructions: &quot;Enter text for the dynamic altText value&quot;,
+                  required: false,
+                  readOnly: false,
+                  disabled: false,
+                  value: local!imageField_altText,
+                  saveInto: local!imageField_altText
+                )
+				 
+              }
+            ),
+			#&quot;SYSTEM_SYSRULES_columnLayout&quot;(
+              contents: {			  
+			  #&quot;SYSTEM_SYSRULES_externalImageField&quot;(
+                  label: local!imageField_label,
+                  instructions: local!imageField_instructions,                 
+                  source: local!imageField_source,
+                  altText: local!imageField_altText
+                )
+				}
+			)
+          }
+        )
+      
+    
+  )
+)</definition>
+        <preferredEditor>legacy</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role allowForAll="false" inherit="true" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role allowForAll="false" inherit="true" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role allowForAll="false" inherit="true" name="administrators">
+            <users>
+                <userUuid>Administrator</userUuid>
+            </users>
+            <groups/>
+        </role>
+        <role allowForAll="false" inherit="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role allowForAll="false" inherit="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role allowForAll="false" inherit="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+</contentHaul>

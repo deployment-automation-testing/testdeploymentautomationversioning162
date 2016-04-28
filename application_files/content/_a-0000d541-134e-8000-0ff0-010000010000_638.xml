@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <constant>
+        <name>company_names</name>
+        <uuid>_a-0000d541-134e-8000-0ff0-010000010000_638</uuid>
+        <description>text array of company names</description>
+        <parentUuid>_a-0000d552-52d7-8000-4b9d-010000010000_614</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <typedValue>
+            <type>
+                <name>Text?list</name>
+                <namespace>http://www.appian.com/ae/types/2009</namespace>
+            </type>
+            <value>
+                <el>appian</el>
+                <el>Arizona Diamondbacks</el>
+                <el>aston-villa</el>
+                <el>Atlanta Braves</el>
+                <el>Microsoft</el>
+                <el>Baltimore Orioles</el>
+                <el>blackburn</el>
+                <el>Boston Red Sox</el>
+                <el>burgerking</el>
+                <el>lowercase</el>
+                <el>California Tortilla</el>
+                <el>chelsea</el>
+                <el>Chicago Cubs</el>
+                <el>Chicago White Sox</el>
+                <el>chipotle</el>
+                <el>cicis</el>
+                <el>Cincinnati Reds</el>
+                <el>Cleveland Indians</el>
+                <el>coke</el>
+                <el>collabralink</el>
+                <el>Colorado Rockies</el>
+                <el>q</el>
+                <el>Detroit Tigers</el>
+                <el>dominos</el>
+                <el>duPont</el>
+                <el>A. G.</el>
+                <el>eagames</el>
+                <el>SomeCompany</el>
+                <el>fedex</el>
+                <el>ford</el>
+                <el>ÉÁ1234</el>
+                <el>Houston Astros</el>
+                <el>hp</el>
+                <el>России</el>
+                <el>impala</el>
+                <el>梁振英晚上到大圍和上水</el>
+                <el>johndeere</el>
+                <el>12345</el>
+                <el>Kansas City Royals</el>
+                <el>Facebook</el>
+                <el>liverpool</el>
+                <el>longhorn</el>
+                <el>Los Angeles Angels</el>
+                <el>Los Angeles Dodgers</el>
+                <el>Ebay</el>
+                <el>man-utd</el>
+                <el>maxis</el>
+                <el>mcdonalds</el>
+                <el>Miami Marlins</el>
+                <el>Milwaukee Brewers</el>
+                <el>Minnesota Twins</el>
+                <el>mission</el>
+                <el>Moes</el>
+                <el>twitter</el>
+                <el>nbc</el>
+                <el>nestle</el>
+                <el>New York Mets</el>
+                <el>New York Yankees</el>
+                <el>newcastle</el>
+                <el>nintendo</el>
+                <el>noodles</el>
+                <el>Rorscache co.</el>
+                <el>Oakland Athletics</el>
+                <el>olivegarden</el>
+                <el>Sprint</el>
+                <el>papajohns</el>
+                <el>paramount</el>
+                <el>Pepsi</el>
+                <el>Philadelphia Phillies</el>
+                <el>Pittsburgh Pirates</el>
+                <el>pizzahut</el>
+                <el>Verizon</el>
+                <el>qdoba</el>
+                <el>QPR</el>
+                <el>AOL</el>
+                <el>Red Lobster</el>
+                <el>Beats</el>
+                <el>San Diego Padres</el>
+                <el>San Francisco Giants</el>
+                <el>seasons52</el>
+                <el>Seattle Mariners</el>
+                <el>sherwinwilliams</el>
+                <el>sports interactive</el>
+                <el>St Louis Cardinals</el>
+                <el>starbucks</el>
+                <el>subway</el>
+                <el>sun</el>
+                <el>swansea</el>
+                <el>Logitech</el>
+                <el>tacobell</el>
+                <el>Tampa Bay Rays</el>
+                <el>Texas Rangers</el>
+                <el>Toronto Blue Jays</el>
+                <el>Dell</el>
+                <el>volvo</el>
+                <el>Solo Cups</el>
+                <el>Washington Nationals</el>
+                <el>wendys</el>
+                <el>wolverhampton</el>
+            </value>
+        </typedValue>
+    </constant>
+    <roleMap public="true">
+        <role allowForAll="false" inherit="true" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role allowForAll="false" inherit="true" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role allowForAll="false" inherit="true" name="administrators">
+            <users>
+                <userUuid>Administrator</userUuid>
+            </users>
+            <groups/>
+        </role>
+        <role allowForAll="false" inherit="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role allowForAll="false" inherit="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role allowForAll="false" inherit="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+</contentHaul>

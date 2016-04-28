@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <rule>
+        <name>dynamic_RecordLink</name>
+        <uuid>_a-0000d84f-8704-8000-3c3b-010000010000_1569</uuid>
+        <description></description>
+        <parentUuid>_a-0000d84f-8704-8000-3c3b-010000010000_1561</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>= load(
+
+	local!recordLink_recordType: #&quot;_a-0000d7c6-7676-8000-6fcc-010000010000_1309&quot;,
+	local!recordLink_identifier: 1,
+	local!recordLink_dashboard: &quot;summary&quot;,
+	local!recordLink_label: &quot;RecordLink&quot;,
+  	
+	with(		
+		#&quot;SYSTEM_SYSRULES_sectionLayoutColumns&quot;(
+          label: &quot;Dynamic Sail Component&quot;,
+          columns: {
+				#&quot;SYSTEM_SYSRULES_columnLayout&quot;(
+				  contents: {                
+					#&quot;SYSTEM_SYSRULES_textField&quot;(
+					  label: &quot;RecordLink RecordType&quot;,
+					  instructions: &quot;Dynamic field TBD&quot;,
+					  required: false,
+					  readOnly: true,
+					  disabled: false,
+					  value: &quot;cons!CompanyRecordType&quot;              
+					),
+					#&quot;SYSTEM_SYSRULES_textField&quot;(
+					  label: &quot;RecordLink Identifier&quot;,
+					  instructions: &quot;Enter text for the dynamic RecordLink Identifier value&quot;,
+					  required: false,
+					  readOnly: false,
+					  disabled: false,
+					  value: local!recordLink_identifier,
+					  saveInto: local!recordLink_identifier
+					),
+					#&quot;SYSTEM_SYSRULES_textField&quot;(
+					  label: &quot;RecordLink Dashboard&quot;,
+					  instructions: &quot;Enter text for the dynamic RecordLink Dashboard value&quot;,
+					  required: false,
+					  readOnly: false,
+					  disabled: false,
+					  value: local!recordLink_dashboard,
+					  saveInto: local!recordLink_dashboard
+					),
+					#&quot;SYSTEM_SYSRULES_textField&quot;(
+					  label: &quot;RecordLink Label&quot;,
+					  instructions: &quot;Enter text for the dynamic RecordLink Label value&quot;,
+					  required: false,
+					  readOnly: false,
+					  disabled: false,
+					  value: local!recordLink_label,
+					  saveInto: local!recordLink_label
+					) 			
+			  }
+            ),
+			#&quot;SYSTEM_SYSRULES_columnLayout&quot;(
+              contents: {
+
+				'type!{http://www.appian.com/ae/types/2009}AnyLinkField'(
+					label: &quot;&quot;,
+					instructions: &quot;&quot;,
+					links: {					
+						#&quot;SYSTEM_SYSRULES_recordLink&quot;(
+							recordType: local!recordLink_recordType,
+							identifier: local!recordLink_identifier,
+							dashboard: local!recordLink_dashboard,
+							label: local!recordLink_label
+						)  				
+					},
+					labelPosition: &quot;ADJACENT&quot;							
+					)				
+				}
+			)
+          }
+        )
+      
+    
+  )
+)</definition>
+        <preferredEditor>legacy</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role allowForAll="false" inherit="true" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role allowForAll="false" inherit="true" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role allowForAll="false" inherit="true" name="administrators">
+            <users>
+                <userUuid>Administrator</userUuid>
+            </users>
+            <groups/>
+        </role>
+        <role allowForAll="false" inherit="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role allowForAll="false" inherit="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role allowForAll="false" inherit="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+</contentHaul>

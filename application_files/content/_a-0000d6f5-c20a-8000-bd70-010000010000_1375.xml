@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
-    <rulesFolder>
-        <name>Reports</name>
-        <uuid>_a-0000d6fd-7cb9-8000-7886-010000010000_951</uuid>
-        <description></description>
-        <parentUuid>_a-0000d516-ce42-8000-11d1-010000010000_542</parentUuid>
+    <constant>
+        <name>areUiEditables</name>
+        <uuid>_a-0000d6f5-c20a-8000-bd70-010000010000_1375</uuid>
+        <description>Change the value of this constant if you want the record details view to be editable</description>
+        <parentUuid>_a-0001d554-e2d4-8000-e2d4-360000360000_75</parentUuid>
         <visibility>
             <advertise>false</advertise>
             <hierarchy>true</hierarchy>
@@ -14,7 +14,14 @@
             <system>false</system>
             <unlogged>false</unlogged>
         </visibility>
-    </rulesFolder>
+        <typedValue>
+            <type>
+                <name>boolean</name>
+                <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+            </type>
+            <value>false</value>
+        </typedValue>
+    </constant>
     <roleMap public="true">
         <role allowForAll="false" inherit="true" name="readers">
             <users/>

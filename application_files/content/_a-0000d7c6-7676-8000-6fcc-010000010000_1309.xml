@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
-    <rulesFolder>
-        <name>Reports</name>
-        <uuid>_a-0000d6fd-7cb9-8000-7886-010000010000_951</uuid>
-        <description></description>
-        <parentUuid>_a-0000d516-ce42-8000-11d1-010000010000_542</parentUuid>
+    <constant>
+        <name>CompanyRecordType</name>
+        <uuid>_a-0000d7c6-7676-8000-6fcc-010000010000_1309</uuid>
+        <description>Process-based Record Type</description>
+        <parentUuid>_a-0000d7fd-38c3-8000-2bf7-010000010000_1323</parentUuid>
         <visibility>
             <advertise>false</advertise>
             <hierarchy>true</hierarchy>
@@ -14,7 +14,25 @@
             <system>false</system>
             <unlogged>false</unlogged>
         </visibility>
-    </rulesFolder>
+        <typedValue>
+            <type>
+                <name>RecordType</name>
+                <namespace>http://www.appian.com/ae/types/2009</namespace>
+            </type>
+            <value a:id="-1" a:uuid="e8233cf0-8fc7-4d5d-9f7a-52e26c38a80a" name="">
+                <a:pluralName/>
+                <a:description/>
+                <a:urlStub/>
+                <a:listViewTemplateExpr/>
+                <a:isSystem>false</a:isSystem>
+                <a:dataSrcExpr/>
+                <a:facetsListExpr/>
+                <a:defaultFiltersExpr/>
+                <a:security>16383</a:security>
+                <a:opaqueId/>
+            </value>
+        </typedValue>
+    </constant>
     <roleMap public="true">
         <role allowForAll="false" inherit="true" name="readers">
             <users/>

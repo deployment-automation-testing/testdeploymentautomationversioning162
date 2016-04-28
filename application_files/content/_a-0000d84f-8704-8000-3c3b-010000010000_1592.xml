@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
-    <rulesFolder>
-        <name>Reports</name>
-        <uuid>_a-0000d6fd-7cb9-8000-7886-010000010000_951</uuid>
+    <rule>
+        <name>dynamic_ColumnLayout</name>
+        <uuid>_a-0000d84f-8704-8000-3c3b-010000010000_1592</uuid>
         <description></description>
-        <parentUuid>_a-0000d516-ce42-8000-11d1-010000010000_542</parentUuid>
+        <parentUuid>_a-0000d84f-8704-8000-3c3b-010000010000_1561</parentUuid>
         <visibility>
             <advertise>false</advertise>
             <hierarchy>true</hierarchy>
@@ -14,7 +14,26 @@
             <system>false</system>
             <unlogged>false</unlogged>
         </visibility>
-    </rulesFolder>
+        <definition>= #&quot;SYSTEM_SYSRULES_sectionLayoutColumns&quot;(
+  label: &quot;Component not yet implemented&quot;,
+  columns: {
+    #&quot;SYSTEM_SYSRULES_columnLayout&quot;(
+      contents: {
+        #&quot;SYSTEM_SYSRULES_textField&quot;(
+          label: &quot;&quot;,
+          instructions: &quot;&quot;,
+          required: false,
+          readOnly: true,
+          disabled: false,
+          value: &quot;Component not yet implemented&quot;
+        )
+      }
+    )
+  }
+)</definition>
+        <preferredEditor>legacy</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
     <roleMap public="true">
         <role allowForAll="false" inherit="true" name="readers">
             <users/>
@@ -25,7 +44,9 @@
             <groups/>
         </role>
         <role allowForAll="false" inherit="true" name="administrators">
-            <users/>
+            <users>
+                <userUuid>Administrator</userUuid>
+            </users>
             <groups/>
         </role>
         <role allowForAll="false" inherit="false" name="denyReaders">

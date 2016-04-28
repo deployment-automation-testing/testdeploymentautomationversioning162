@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<portletHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <portlet>
+        <uuid>_d-0000d260-0d2f-8000-0aa3-820000820000_40</uuid>
+        <name>Test Report</name>
+        <portletType>portal.portlet.report</portletType>
+        <frame>portlet.titleonly</frame>
+        <shared>true</shared>
+        <public>true</public>
+        <inheritsSecurity>false</inheritsSecurity>
+        <parameters>
+            <item>
+                <key>graphSize</key>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:int">70</value>
+            </item>
+            <item>
+                <key>useDashboardContext</key>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:int">0</value>
+            </item>
+            <item>
+                <key>showUserControls</key>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:int">1</value>
+            </item>
+            <item>
+                <key>filterOperation</key>
+            </item>
+            <item>
+                <key>showFilters</key>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:int">1</value>
+            </item>
+            <item>
+                <key>pickerType_contextIds</key>
+                <listValue>
+                    <item xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:long">23</item>
+                </listValue>
+            </item>
+            <item>
+                <key>chartHeight</key>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:int">270</value>
+            </item>
+            <item>
+                <key>contextUuids</key>
+                <listValue>
+                    <item xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">0003d260-2af2-8000-0aa8-820000820000</item>
+                </listValue>
+            </item>
+            <item>
+                <key>showToolbar</key>
+            </item>
+            <item>
+                <key>reportUuid</key>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">_a-0000d260-0d2f-8000-0aa7-820000820000_369</value>
+            </item>
+            <item>
+                <key>chartWidth</key>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:int">360</value>
+            </item>
+            <item>
+                <key>filterValue</key>
+            </item>
+            <item>
+                <key>showEditControls</key>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:int">0</value>
+            </item>
+            <item>
+                <key>filterColumn</key>
+            </item>
+            <item>
+                <key>batchSize</key>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">25</value>
+            </item>
+            <item>
+                <key>chartSize</key>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">medium</value>
+            </item>
+        </parameters>
+    </portlet>
+    <roleMap>
+        <role name="editor">
+            <users/>
+            <groups/>
+        </role>
+        <role name="viewer">
+            <users/>
+            <groups/>
+        </role>
+        <role name="admin">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+</portletHaul>

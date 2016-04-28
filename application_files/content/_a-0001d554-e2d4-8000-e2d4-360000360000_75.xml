@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
     <rulesFolder>
-        <name>Reports</name>
-        <uuid>_a-0000d6fd-7cb9-8000-7886-010000010000_951</uuid>
+        <name>ui-expressions</name>
+        <uuid>_a-0001d554-e2d4-8000-e2d4-360000360000_75</uuid>
         <description></description>
-        <parentUuid>_a-0000d516-ce42-8000-11d1-010000010000_542</parentUuid>
+        <parentUuid>_a-0000d552-52d7-8000-4b9d-010000010000_614</parentUuid>
         <visibility>
             <advertise>false</advertise>
             <hierarchy>true</hierarchy>
@@ -25,7 +25,9 @@
             <groups/>
         </role>
         <role allowForAll="false" inherit="true" name="administrators">
-            <users/>
+            <users>
+                <userUuid>Administrator</userUuid>
+            </users>
             <groups/>
         </role>
         <role allowForAll="false" inherit="false" name="denyReaders">

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<pageHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <page>
+        <name>Test Report Channel</name>
+        <description>Test Report Channel</description>
+        <public>false</public>
+        <groupUuid>0001d065-e6ac-8000-e6ac-65075c65075c</groupUuid>
+        <type>0</type>
+        <url></url>
+        <template>portal.template.community.1</template>
+        <zoneCount>1</zoneCount>
+        <approvalRequired>false</approvalRequired>
+        <uuid>_c-0000d260-0d2f-8000-0aa3-820000820000_28</uuid>
+        <portlets>
+            <item zone="0" index="0">_d-0000d260-0d2f-8000-0aa3-820000820000_40</item>
+        </portlets>
+    </page>
+    <roleMap>
+        <role name="approver">
+            <users/>
+            <groups/>
+        </role>
+        <role name="editor">
+            <users/>
+            <groups/>
+        </role>
+        <role name="viewer">
+            <users/>
+            <groups>
+                <groupUuid>0001d065-e6ac-8000-e6ac-65075c65075c</groupUuid>
+            </groups>
+        </role>
+        <role name="admin">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+</pageHaul>

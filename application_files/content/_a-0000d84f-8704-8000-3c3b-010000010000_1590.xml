@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <rule>
+        <name>dynamic_DateField</name>
+        <uuid>_a-0000d84f-8704-8000-3c3b-010000010000_1590</uuid>
+        <description></description>
+        <parentUuid>_a-0000d84f-8704-8000-3c3b-010000010000_1561</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>= load(
+  local!dateDisplayField_label: &quot;label&quot;,
+  local!dateDisplayField_instructions: &quot;instructions&quot;,  
+  local!dateDisplayField_valueText: &quot;&quot;,
+  local!dateDisplayField_month: 9,
+  local!dateDisplayField_day: 5,
+  local!dateDisplayField_year: 1986,
+  local!dateDisplayField_valueType: {1},
+  
+  with(
+		localdateDisplayField_date: date(tointeger(local!dateDisplayField_year),tointeger(local!dateDisplayField_month),tointeger(local!dateDisplayField_day)),
+		local!dateDisplayField_value: if(dateDisplayField_valueType=2,
+										localdateDisplayField_date,
+										local!dateDisplayField_valueText
+		),		
+		#&quot;SYSTEM_SYSRULES_sectionLayoutColumns&quot;(
+          label: &quot;Dynamic Sail Component&quot;,
+          columns: {
+            #&quot;SYSTEM_SYSRULES_columnLayout&quot;(
+              contents: {
+                #&quot;SYSTEM_SYSRULES_textField&quot;(
+                  label: &quot;Label&quot;,
+                  instructions: &quot;Enter text for the dynamic Label value&quot;,
+                  required: false,
+                  readOnly: false,
+                  disabled: false,
+                  value: local!dateDisplayField_label,
+                  saveInto: local!dateDisplayField_label
+                ),
+                #&quot;SYSTEM_SYSRULES_textField&quot;(
+                  label: &quot;Instructions&quot;,
+                  instructions: &quot;Enter text for the dynamic Instructions value&quot;,
+                  required: false,
+                  readOnly: false,
+                  disabled: false,
+                  value: local!dateDisplayField_instructions,
+                  saveInto: local!dateDisplayField_instructions
+                ),
+				#&quot;SYSTEM_SYSRULES_radioButtonFieldByIndex&quot;(
+                  label: &quot;Dynamic Value Type&quot;,
+                  instructions: &quot;Use Month/Day/Year values or Value(Text) to populate dynamic value&quot;,
+                  required: false,
+                  disabled: false,
+                  choiceLabels: {
+                    &quot;Value (TextField)&quot;,
+                    &quot;Month/Day/Year (date(integer,integer,integer))&quot;
+                  },
+                  value: local!dateDisplayField_valueType,
+                  saveInto: local!dateDisplayField_valueType
+                ),                
+                #&quot;SYSTEM_SYSRULES_textField&quot;(
+                  label: &quot;Value&quot;,
+                  instructions: &quot;Enter text for the dynamic Value value&quot;,
+                  required: false,
+                  readOnly: false,
+                  disabled: if(dateDisplayField_valueType=1,false,true),
+                  value: if(dateDisplayField_valueType=1,local!dateDisplayField_valueText,localdateDisplayField_date),
+                  saveInto: local!dateDisplayField_valueText
+                ),				
+				#&quot;SYSTEM_SYSRULES_textField&quot;(
+                  label: &quot;Month&quot;,
+                  instructions: &quot;Enter integer for Month&quot;,
+                  required: false,
+                  readOnly: false,
+                  disabled: if(dateDisplayField_valueType=2,false,true),
+                  value: local!dateDisplayField_month,
+                  saveInto: local!dateDisplayField_month
+				),
+				#&quot;SYSTEM_SYSRULES_textField&quot;(
+                  label: &quot;Day&quot;,
+                  instructions: &quot;Enter integer for Day&quot;,
+                  required: false,
+                  readOnly: false,
+                  disabled: if(dateDisplayField_valueType=2,false,true),
+                  value: local!dateDisplayField_day,
+                  saveInto: local!dateDisplayField_day
+				),
+				#&quot;SYSTEM_SYSRULES_textField&quot;(
+                  label: &quot;Year&quot;,
+                  instructions: &quot;Enter integer for Year&quot;,
+                  required: false,
+                  readOnly: false,
+                  disabled: if(dateDisplayField_valueType=2,false,true),
+                  value: local!dateDisplayField_year,
+                  saveInto: local!dateDisplayField_year
+                )
+				 
+              }
+            ),
+			#&quot;SYSTEM_SYSRULES_columnLayout&quot;(
+              contents: {
+			  
+			  #&quot;SYSTEM_SYSRULES_dateDisplayField&quot;(
+				label: local!dateDisplayField_label,
+				instructions:local!dateDisplayField_instructions,
+				value:local!dateDisplayField_value 
+			  )
+			  
+
+			  }
+			)
+          }
+        )
+      
+    
+  )
+)</definition>
+        <preferredEditor>legacy</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role allowForAll="false" inherit="true" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role allowForAll="false" inherit="true" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role allowForAll="false" inherit="true" name="administrators">
+            <users>
+                <userUuid>Administrator</userUuid>
+            </users>
+            <groups/>
+        </role>
+        <role allowForAll="false" inherit="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role allowForAll="false" inherit="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role allowForAll="false" inherit="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+</contentHaul>

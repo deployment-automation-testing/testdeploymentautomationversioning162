@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
     <rulesFolder>
-        <name>Reports</name>
-        <uuid>_a-0000d6fd-7cb9-8000-7886-010000010000_951</uuid>
-        <description></description>
-        <parentUuid>_a-0000d516-ce42-8000-11d1-010000010000_542</parentUuid>
+        <name>DynamicSailExpressions</name>
+        <uuid>_a-0000d84f-8704-8000-3c3b-010000010000_1554</uuid>
+        <description>All rules for generating dynamic Sail components</description>
+        <parentUuid>SYSTEM_RULES_ROOT</parentUuid>
         <visibility>
             <advertise>false</advertise>
             <hierarchy>true</hierarchy>
@@ -16,17 +16,21 @@
         </visibility>
     </rulesFolder>
     <roleMap public="true">
-        <role allowForAll="false" inherit="true" name="readers">
+        <role allowForAll="true" inherit="false" name="readers">
             <users/>
             <groups/>
         </role>
-        <role allowForAll="false" inherit="true" name="authors">
+        <role allowForAll="true" inherit="false" name="authors">
             <users/>
             <groups/>
         </role>
-        <role allowForAll="false" inherit="true" name="administrators">
-            <users/>
-            <groups/>
+        <role allowForAll="false" inherit="false" name="administrators">
+            <users>
+                <userUuid>Administrator</userUuid>
+            </users>
+            <groups>
+                <groupUuid>0001d065-e6ac-8000-e6ac-65075c65075c</groupUuid>
+            </groups>
         </role>
         <role allowForAll="false" inherit="false" name="denyReaders">
             <users/>

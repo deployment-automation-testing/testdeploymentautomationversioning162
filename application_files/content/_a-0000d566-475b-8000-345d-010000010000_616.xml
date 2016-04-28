@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <rule>
+        <name>uiCompaniesFacets</name>
+        <uuid>_a-0000d566-475b-8000-345d-010000010000_616</uuid>
+        <description>This is the default UI rule used by the 'Companies' record.</description>
+        <parentUuid>_a-0001d554-e2d4-8000-e2d4-360000360000_75</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>=load(
+readonly: not(#&quot;_a-0000d6f5-c20a-8000-bd70-010000010000_1375&quot;),
+description,
+established: today() - 360*rand()*30,
+street,
+number: round(rand()*100,0),
+city,
+country,
+zip: 20190 + round(rand()*10, 0),
+'type!{http://www.appian.com/ae/types/2009}ColumnArrayLayout'(
+     columns: {
+    'type!{http://www.appian.com/ae/types/2009}ColumnLayout'(
+      contents: {
+      'type!{http://www.appian.com/ae/types/2009}TextField'(
+        label: &quot;Name of the company&quot;, 
+	instructions: street &amp; joinarray({&quot; #&quot; &amp; number, city, upper(country), zip}, &quot;. &quot;), 
+	required: true(), 
+	readOnly: readonly, 
+	disabled: false(), 
+	value: rf!name,
+	saveInto: rf!name
+	),
+      'type!{http://www.appian.com/ae/types/2009}ParagraphField'(
+        label: &quot;Description&quot;, 
+	instructions: &quot;What does the company do since &quot;&amp;established&amp;&quot;?&quot;,  
+	required: false(), 
+	readOnly: readonly, 
+	disabled: false(), 
+	value: description,
+	saveInto: description
+	),
+      'type!{http://www.appian.com/ae/types/2009}SectionLayout'(
+        label: &quot;More Info&quot;, 
+        content: 
+          'type!{http://www.appian.com/ae/types/2009}ColumnArrayLayout'(
+	    columns: {
+	    'type!{http://www.appian.com/ae/types/2009}ColumnLayout'(
+	      contents: {
+	      'type!{http://www.appian.com/ae/types/2009}DateField'(
+	        label: &quot;Established&quot;, 
+		required: false(), 
+		readOnly: readonly, 
+		disabled: false(),
+		value: established,
+		saveInto: established
+		),
+	      'type!{http://www.appian.com/ae/types/2009}LinkField'(
+	        label: &quot;Website&quot;, 
+		links: {label:rf!name, uri:&quot;http://www.&quot;&amp;stripwith(rf!name,&quot; &quot;)&amp;&quot;.com&quot;}
+		),
+	      'type!{http://www.appian.com/ae/types/2009}FileUploadField'(
+	        label: &quot;Icon&quot;, 
+		instructions: &quot;Upload a new icon&quot;, 
+		required: false(), 
+		disabled: false(), 
+		uploadUrl: &quot;https://matasano.appianci.net/suite/api/tempo/file&quot;, 
+		saveInto: &quot;&quot;
+		)
+     })}))
+     }),
+     'type!{http://www.appian.com/ae/types/2009}ColumnLayout'(
+       contents: {
+        'type!{http://www.appian.com/ae/types/2009}TextField'(
+	  label: &quot;Street Address&quot;, 
+	  instructions: &quot;&quot;, 
+	  required: false(), 
+	  readOnly: readonly, 
+	  disabled: false(), 
+	  value: street,
+	  saveInto: street
+	  ),
+        'type!{http://www.appian.com/ae/types/2009}IntegerField'(
+	  label: &quot;Number&quot;, 
+	  instructions: &quot;&quot;, 
+	  required: false(), 
+	  readOnly: readonly, 
+	  disabled: false(), 
+	  value: number,
+	  saveInto: number
+	  ),
+        'type!{http://www.appian.com/ae/types/2009}TextField'(
+	  label: &quot;City&quot;, 
+	  instructions: &quot;&quot;, 
+	  required: false(), 
+	  readOnly: readonly, 
+	  disabled: false(), 
+	  value: city,
+	  saveInto: city
+	  ),
+        'type!{http://www.appian.com/ae/types/2009}TextField'(
+	  label: &quot;Country&quot;, 
+	  instructions: &quot;&quot;, 
+	  required: false(), 
+	  readOnly: readonly, 
+	  disabled: false(), 
+	  value: country,
+	  saveInto: country
+	  ),
+        'type!{http://www.appian.com/ae/types/2009}IntegerField'(
+	  label: &quot;ZIP&quot;, 
+	  instructions: &quot;&quot;, 
+	  required: false(), 
+	  readOnly: readonly, 
+	  disabled: false(), 
+	  value: zip,
+	  saveInto: zip
+	  )
+       }
+     )
+   }
+ )
+)</definition>
+        <preferredEditor>legacy</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role allowForAll="false" inherit="true" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role allowForAll="false" inherit="true" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role allowForAll="false" inherit="true" name="administrators">
+            <users>
+                <userUuid>Administrator</userUuid>
+            </users>
+            <groups/>
+        </role>
+        <role allowForAll="false" inherit="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role allowForAll="false" inherit="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role allowForAll="false" inherit="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+</contentHaul>

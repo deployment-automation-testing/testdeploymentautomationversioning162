@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <rule>
+        <name>dynamic_ColumnChart</name>
+        <uuid>_a-0000d84f-8704-8000-3c3b-010000010000_1593</uuid>
+        <description></description>
+        <parentUuid>_a-0000d84f-8704-8000-3c3b-010000010000_1561</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>= load(
+  local!columnChartField_label: &quot;label&quot;,
+  local!columnChartField_instructions: &quot;instructions&quot;,
+  local!columnChartField_categories: &quot;[Category 1][Category 2][Category 3][Category 4]&quot;,  
+  local!columnChartField_xAxisTitle: &quot;x axis title&quot;,
+  local!columnChartField_yAxisTitle: &quot;y axis title&quot;,
+  local!columnChartField_stacking: &quot;NORMAL&quot;,
+  local!columnChartField_showLegend:{2},
+  local!columnChartField_showDataLabels:{2},
+  local!columnChartField_showTooltips:{2},
+  local!columnChartField_allowDecimalAxisLabels:{2},
+  local!columnChartField_numberOfSeries: 1,
+  
+  local!columnChartField_series_label_1: &quot;legend&quot;,
+  local!columnChartField_series_data_1:  &quot;[5][10][15][20]&quot;,
+  local!columnChartField_series_color_1:  &quot;ORANGE&quot;,
+  
+  local!columnChartField_series_label_2: &quot;legend&quot;,
+  local!columnChartField_series_data_2:  &quot;[10][15][20][25]&quot;,
+  local!columnChartField_series_color_2:  &quot;BLUEGRAY&quot;,
+  
+  local!columnChartField_series_label_3: &quot;legend&quot;,
+  local!columnChartField_series_data_3:  &quot;[12.5][17.25][22.6][28.275]&quot;,
+  local!columnChartField_series_color_3:  &quot;LIMEGREEN&quot;,
+  
+  with(
+    
+	/*====== Chart Series ======*/	
+	
+	local!chartSeries1: {
+		
+		#&quot;SYSTEM_SYSRULES_chartSeries&quot;(
+						label: local!columnChartField_series_label_1, 
+						data: extract(local!columnChartField_series_data_1,&quot;[&quot;,&quot;]&quot;),
+						color: local!columnChartField_series_color_1
+		)					
+	},
+	local!chartSeries2: {
+		
+		#&quot;SYSTEM_SYSRULES_chartSeries&quot;(
+						label: local!columnChartField_series_label_2, 
+						data: extract(local!columnChartField_series_data_2,&quot;[&quot;,&quot;]&quot;),
+						color: local!columnChartField_series_color_2
+		)					
+	},
+	local!chartSeries3: {
+		
+		#&quot;SYSTEM_SYSRULES_chartSeries&quot;(
+						label: local!columnChartField_series_label_3, 
+						data: extract(local!columnChartField_series_data_3,&quot;[&quot;,&quot;]&quot;),
+						color: local!columnChartField_series_color_3
+		)					
+	},
+	
+	local!chartSeries_list: {
+		local!chartSeries1,
+		local!chartSeries2,
+		local!chartSeries3	
+	},
+	
+	/*===== Chart Series Properties =====*/
+	
+	local!chartSeries1_properties: {
+		#&quot;SYSTEM_SYSRULES_textField&quot;(
+		  label: &quot;Series # 1 (legend)&quot;,
+		  instructions: &quot;Enter text to generate the legend using: a!chartSeries function value 'label'&quot;,
+		  required: false,
+		  readOnly: false,
+		  disabled: false,
+		  value: local!columnChartField_series_label_1,
+		  saveInto: local!columnChartField_series_label_1
+		),			
+		#&quot;SYSTEM_SYSRULES_textField&quot;(
+		  label: &quot;Series # 1 (data)&quot;,
+		  instructions: &quot;Enter data in box [], eg. [50] to generate the legend using: a!chartSeries function value 'label'&quot;,
+		  required: false,
+		  readOnly: false,
+		  disabled: false,
+		  value: local!columnChartField_series_data_1,
+		  saveInto: local!columnChartField_series_data_1
+		),
+		#&quot;SYSTEM_SYSRULES_textField&quot;(
+		  label: &quot;Series # 1 (color)&quot;,
+		  instructions: &quot;Enter text to generate the color using: a!chartSeries function value 'color'&quot;,
+		  required: false,
+		  readOnly: false,
+		  disabled: false,
+		  value: local!columnChartField_series_color_1,
+		  saveInto: local!columnChartField_series_color_1
+		)
+	},
+	local!chartSeries2_properties: {
+		#&quot;SYSTEM_SYSRULES_textField&quot;(
+		  label: &quot;Series # 2 (legend)&quot;,
+		  instructions: &quot;Enter text to generate the legend using: a!chartSeries function value 'label'&quot;,
+		  required: false,
+		  readOnly: false,
+		  disabled: false,
+		  value: local!columnChartField_series_label_2,
+		  saveInto: local!columnChartField_series_label_2
+		),			
+		#&quot;SYSTEM_SYSRULES_textField&quot;(
+		  label: &quot;Series # 2 (data)&quot;,
+		  instructions: &quot;Enter data in box [], eg. [50] to generate the legend using: a!chartSeries function value 'label'&quot;,
+		  required: false,
+		  readOnly: false,
+		  disabled: false,
+		  value: local!columnChartField_series_data_2,
+		  saveInto: local!columnChartField_series_data_2
+		),
+		#&quot;SYSTEM_SYSRULES_textField&quot;(
+		  label: &quot;Series # 2 (color)&quot;,
+		  instructions: &quot;Enter text to generate the color using: a!chartSeries function value 'color'&quot;,
+		  required: false,
+		  readOnly: false,
+		  disabled: false,
+		  value: local!columnChartField_series_color_2,
+		  saveInto: local!columnChartField_series_color_2
+		)
+	},
+	local!chartSeries3_properties: {
+		#&quot;SYSTEM_SYSRULES_textField&quot;(
+		  label: &quot;Series # 3 (legend)&quot;,
+		  instructions: &quot;Enter text to generate the legend using: a!chartSeries function value 'label'&quot;,
+		  required: false,
+		  readOnly: false,
+		  disabled: false,
+		  value: local!columnChartField_series_label_3,
+		  saveInto: local!columnChartField_series_label_3
+		),			
+		#&quot;SYSTEM_SYSRULES_textField&quot;(
+		  label: &quot;Series # 3 (data)&quot;,
+		  instructions: &quot;Enter data in box [], eg. [50] to generate the legend using: a!chartSeries function value 'label'&quot;,
+		  required: false,
+		  readOnly: false,
+		  disabled: false,
+		  value: local!columnChartField_series_data_3,
+		  saveInto: local!columnChartField_series_data_3
+		),
+		#&quot;SYSTEM_SYSRULES_textField&quot;(
+		  label: &quot;Series # 3 (color)&quot;,
+		  instructions: &quot;Enter text to generate the color using: a!chartSeries function value 'color'&quot;,
+		  required: false,
+		  readOnly: false,
+		  disabled: false,
+		  value: local!columnChartField_series_color_3,
+		  saveInto: local!columnChartField_series_color_3
+		)
+	},
+	
+	
+	local!chartSeries_properties_list: {
+		local!chartSeries1_properties,
+		local!chartSeries2_properties,
+		local!chartSeries3_properties	
+	},
+	
+	
+	/*=============*/
+	
+	
+	local!columnChartField_series_shown: 	if(local!columnChartField_numberOfSeries=1,remove(local!chartSeries_list,{2,3}),
+										if(local!columnChartField_numberOfSeries=2,remove(local!chartSeries_list,{3})
+										,local!chartSeries_list)),
+	
+	
+	
+	local!columnChartField_properites_shown: if(local!columnChartField_numberOfSeries=1,remove(local!chartSeries_properties_list,{4,5,6,7,8,9}),
+										if(local!columnChartField_numberOfSeries=2,remove(local!chartSeries_properties_list,{7,8,9})
+										,local!chartSeries_properties_list)),
+	
+	
+    #&quot;SYSTEM_SYSRULES_sectionLayoutColumns&quot;(
+      label: &quot;Dynamic Sail Component&quot;,
+      columns: {
+        #&quot;SYSTEM_SYSRULES_columnLayout&quot;(
+          contents: {
+            #&quot;SYSTEM_SYSRULES_textField&quot;(
+              label: &quot;Label&quot;,
+              instructions: &quot;Enter text for the dynamic Label value&quot;,
+              required: false,
+              readOnly: false,
+              disabled: false,
+              value: local!columnChartField_label,
+              saveInto: local!columnChartField_label
+            ),
+            #&quot;SYSTEM_SYSRULES_textField&quot;(
+              label: &quot;Instructions&quot;,
+              instructions: &quot;Enter text for the dynamic Instructions value&quot;,
+              required: false,
+              readOnly: false,
+              disabled: false,
+              value: local!columnChartField_instructions,
+              saveInto: local!columnChartField_instructions
+            ),
+            #&quot;SYSTEM_SYSRULES_textField&quot;(
+              label: &quot;Categories&quot;,
+              instructions: &quot;Enter categories in boxes [], eg. [Category5][Category6][etc..]&quot;,
+              required: false,
+              readOnly: false,
+              disabled: false,
+              value: local!columnChartField_categories,
+              saveInto: local!columnChartField_categories
+            ),
+            #&quot;SYSTEM_SYSRULES_textField&quot;(
+              label: &quot;X Axis Title&quot;,
+              instructions: &quot;Enter text for the dynamic xAxisTitle value&quot;,
+              required: false,
+              readOnly: false,
+              disabled: false,
+              value: local!columnChartField_xAxisTitle,
+              saveInto: local!columnChartField_xAxisTitle
+            ),
+            #&quot;SYSTEM_SYSRULES_textField&quot;(
+              label: &quot;Y Axis Title&quot;,
+              instructions: &quot;Enter text for the dynamic yAxisTitle value&quot;,
+              required: false,
+              readOnly: false,
+              disabled: false,
+              value: local!columnChartField_yAxisTitle,
+              saveInto: local!columnChartField_yAxisTitle
+            ),
+            #&quot;SYSTEM_SYSRULES_textField&quot;(
+              label: &quot;Stacking&quot;,
+              instructions: &quot;Enter 'NONE' , 'NORMAL' for the dynamic Stacking value&quot;,
+              required: false,
+              readOnly: false,
+              disabled: false,
+              value: local!columnChartField_stacking,
+              saveInto: local!columnChartField_stacking
+            ),
+            #&quot;SYSTEM_SYSRULES_radioButtonFieldByIndex&quot;(
+              label: &quot;Show Legend&quot;,
+              instructions: &quot;Checked=true, Unchecked=false&quot;,
+              required: false,
+              disabled: false,
+              choiceLabels: {
+                &quot;True&quot;,
+                &quot;False&quot;
+              },
+              value: local!columnChartField_showLegend,
+              saveInto: local!columnChartField_showLegend
+            ),
+            #&quot;SYSTEM_SYSRULES_radioButtonFieldByIndex&quot;(
+              label: &quot;Show Data Labels&quot;,
+              instructions: &quot;Checked=true, Unchecked=false&quot;,
+              required: false,
+              disabled: false,
+              choiceLabels: {
+                &quot;True&quot;,
+                &quot;False&quot;
+              },
+              value: local!columnChartField_showDataLabels,
+              saveInto: local!columnChartField_showDataLabels
+            ),
+            #&quot;SYSTEM_SYSRULES_radioButtonFieldByIndex&quot;(
+              label: &quot;Show Tool Tips&quot;,
+              instructions: &quot;Checked=true, Unchecked=false&quot;,
+              required: false,
+              disabled: false,
+              choiceLabels: {
+                &quot;True&quot;,
+                &quot;False&quot;
+              },
+              value: local!columnChartField_showTooltips,
+              saveInto: local!columnChartField_showTooltips
+            ),
+            #&quot;SYSTEM_SYSRULES_radioButtonFieldByIndex&quot;(
+              label: &quot;Allow Decimal Axis Labels&quot;,
+              instructions: &quot;Checked=true, Unchecked=false&quot;,
+              required: false,
+              disabled: false,
+              choiceLabels: {
+                &quot;True&quot;,
+                &quot;False&quot;
+              },
+              value: local!columnChartField_allowDecimalAxisLabels,
+              saveInto: local!columnChartField_allowDecimalAxisLabels
+            )
+          }
+        ),
+        #&quot;SYSTEM_SYSRULES_columnLayout&quot;(
+          contents: {
+            #&quot;SYSTEM_SYSRULES_columnChartField&quot;(
+              label: local!columnChartField_label,
+              instructions: local!columnChartField_instructions,
+              categories: extract(
+                local!columnChartField_categories,
+                &quot;[&quot;,
+                &quot;]&quot;
+              ),
+              series: local!columnChartField_series_shown,
+              xAxisTitle: local!columnChartField_xAxisTitle,
+              yAxisTitle: local!columnChartField_yAxisTitle,
+              stacking: local!columnChartField_stacking,
+              showLegend: if(
+                local!columnChartField_showLegend = 1,
+                &quot;true&quot;,
+                &quot;false&quot;
+              ),
+              showDataLabels: if(
+                local!columnChartField_showDataLabels = 1,
+                &quot;true&quot;,
+                &quot;false&quot;
+              ),
+              showTooltips: if(
+                local!columnChartField_showTooltips = 1,
+                &quot;true&quot;,
+                &quot;false&quot;
+              ),
+              allowDecimalAxisLabels: if(
+                local!columnChartField_allowDecimalAxisLabels = 1,
+                &quot;true&quot;,
+                &quot;false&quot;
+              )
+            ),
+            #&quot;SYSTEM_SYSRULES_ButtonArrayLayout&quot;(
+              buttons: {
+                #&quot;SYSTEM_SYSRULES_ButtonWidget&quot;(
+                  label: &quot;Add a Series&quot;,
+                  style: &quot;PRIMARY&quot;,
+                  confirmMessage: &quot;&quot;,
+                  disabled: false,
+                  value: if(
+                    local!columnChartField_numberOfSeries &lt; 3,
+                    local!columnChartField_numberOfSeries + 1,
+                    3
+                  ),
+                  saveInto: local!columnChartField_numberOfSeries
+                ),
+                #&quot;SYSTEM_SYSRULES_ButtonWidget&quot;(
+                  label: &quot;Remove a Series&quot;,
+                  style: &quot;DESTRUCTIVE&quot;,
+                  confirmMessage: &quot;&quot;,
+                  disabled: false,
+                  value: if(
+                    local!columnChartField_numberOfSeries &gt; 1,
+                    local!columnChartField_numberOfSeries - 1,
+                    1
+                  ),
+                  saveInto: local!columnChartField_numberOfSeries
+                )
+              }
+            ),
+            local!columnChartField_properites_shown
+          }
+        )
+      }
+    )
+  )
+)</definition>
+        <preferredEditor>legacy</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role allowForAll="false" inherit="true" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role allowForAll="false" inherit="true" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role allowForAll="false" inherit="true" name="administrators">
+            <users>
+                <userUuid>Administrator</userUuid>
+            </users>
+            <groups/>
+        </role>
+        <role allowForAll="false" inherit="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role allowForAll="false" inherit="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role allowForAll="false" inherit="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+</contentHaul>
