@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="https://gwt-grid.appianci.net/suite/types/"
+  xmlns:tns="https://gwt-grid.appianci.net/suite/types/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:complexType name="gwtpgTextVariations">
+    <xsd:sequence>
+      <xsd:element name="LongNoSpaces1" nillable="true" type="xsd:string"/>
+      <xsd:element name="LongNoSpaces2" nillable="true" type="xsd:string"/>
+      <xsd:element name="LongNoSpaces3" nillable="true" type="xsd:string"/>
+      <xsd:element name="LongSpaced1" nillable="true" type="xsd:string"/>
+      <xsd:element name="LongSpaced2" nillable="true" type="xsd:string"/>
+      <xsd:element name="LongSpaced3" nillable="true" type="xsd:string"/>
+      <xsd:element name="EmptyText" nillable="true" type="xsd:string"/>
+      <xsd:element name="EmptyInt" nillable="true" type="xsd:int"/>
+      <xsd:element name="EmptyTime" nillable="true" type="xsd:time"/>
+      <xsd:element name="EmptyDateTime" nillable="true" type="xsd:dateTime"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <constant>
+        <name>sailComponentsList</name>
+        <uuid>_a-0000d84f-8704-8000-3c3b-010000010000_1555</uuid>
+        <description>The list of all Sail components. Current verison = 7.3</description>
+        <parentUuid>_a-0000d84f-8704-8000-3c3b-010000010000_1554</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <typedValue>
+            <type>
+                <name>Text?list</name>
+                <namespace>http://www.appian.com/ae/types/2009</namespace>
+            </type>
+            <value>
+                <el>AnyLinkField</el>
+                <el>BarChart</el>
+                <el>ButtonLayout</el>
+                <el>ButtonWidget</el>
+                <el>CheckboxField</el>
+                <el>ColumnChart</el>
+                <el>ColumnLayout</el>
+                <el>DashboardLayout</el>
+                <el>DateField</el>
+                <el>DateTimeField</el>
+                <el>DateTimePickerField</el>
+                <el>DocumentDownloadLink</el>
+                <el>DropdownField</el>
+                <el>DynamicLink</el>
+                <el>FileUploadField</el>
+                <el>FloatingPointField (Decimal)</el>
+                <el>FormLayout</el>
+                <el>GridField</el>
+                <el>GridLinkColumn</el>
+                <el>GridTextColumn</el>
+                <el>ImageField</el>
+                <el>ImageGalleryField</el>
+                <el>IntegerField</el>
+                <el>LineChart</el>
+                <el>LinkField</el>
+                <el>MilestoneField</el>
+                <el>MultipleDropdownField</el>
+                <el>ParagraphField</el>
+                <el>PickerField</el>
+                <el>PieChart</el>
+                <el>ProcessTaskLink</el>
+                <el>ProgressBarField</el>
+                <el>RadioButtonField</el>
+                <el>RecordLink</el>
+                <el>SafeLink</el>
+                <el>SafeURI</el>
+                <el>SectionLayout</el>
+                <el>Simple Grid</el>
+                <el>StackedBarChart</el>
+                <el>TextField</el>
+                <el>TimeField</el>
+                <el>z-Testing Sandbox</el>
+            </value>
+        </typedValue>
+    </constant>
+    <roleMap public="true">
+        <role allowForAll="false" inherit="true" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role allowForAll="false" inherit="true" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role allowForAll="false" inherit="true" name="administrators">
+            <users>
+                <userUuid>Administrator</userUuid>
+            </users>
+            <groups/>
+        </role>
+        <role allowForAll="false" inherit="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role allowForAll="false" inherit="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role allowForAll="false" inherit="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+</contentHaul>

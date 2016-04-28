@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<recordTypeHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <recordType name="Commit" a:uuid="74fda519-09b6-4192-bafd-3e4bd90a42ee">
+        <a:pluralName>Commits</a:pluralName>
+        <a:description>All commits that have been created on Sprints. Source from Entity</a:description>
+        <a:urlStub>commit</a:urlStub>
+        <a:source xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="a:DataStoreEntity" a:uuid="b285c4ed-eac8-49c5-8507-cdeb75366164@_a-0000d570-2b75-8000-2728-820000820000_2081"/>
+        <a:listViewTemplateExpr>#&quot;SYSTEM_SYSRULES_listViewItem&quot;(&#xD;
+  image:#&quot;_a-0000d552-52d7-8000-4b9d-010000010000_615&quot;, &#xD;
+  title:rf!desc, &#xD;
+  details:rf!jiraLink, &#xD;
+  timestamp:now()&#xD;
+)</a:listViewTemplateExpr>
+        <a:fieldCfg name="Title">
+            <a:sourceRef>desc</a:sourceRef>
+            <a:isSortable>false</a:isSortable>
+            <a:isSearchable>false</a:isSearchable>
+            <a:isFacet>true</a:isFacet>
+            <a:facetType>CUSTOM_BUCKETS_CLOSED</a:facetType>
+            <a:isExclusiveFacet>true</a:isExclusiveFacet>
+            <a:facetLabelExpr>=&quot;Commit Title&quot;</a:facetLabelExpr>
+            <a:facetOption>
+                <a:labelExpr>=&quot;A&quot;</a:labelExpr>
+                <a:facetOperator>BETWEEN</a:facetOperator>
+                <a:lowerLimitExpr>=&quot;A&quot;</a:lowerLimitExpr>
+                <a:upperLimitExpr>=&quot;B&quot;</a:upperLimitExpr>
+            </a:facetOption>
+            <a:facetOption>
+                <a:labelExpr>=&quot;B - C&quot;</a:labelExpr>
+                <a:facetOperator>BETWEEN</a:facetOperator>
+                <a:lowerLimitExpr>=&quot;B&quot;</a:lowerLimitExpr>
+                <a:upperLimitExpr>=&quot;D&quot;</a:upperLimitExpr>
+            </a:facetOption>
+            <a:facetOption>
+                <a:labelExpr>=&quot;D - H&quot;</a:labelExpr>
+                <a:facetOperator>BETWEEN</a:facetOperator>
+                <a:lowerLimitExpr>=&quot;D&quot;</a:lowerLimitExpr>
+                <a:upperLimitExpr>=&quot;I&quot;</a:upperLimitExpr>
+            </a:facetOption>
+            <a:sortOrderIndex>0</a:sortOrderIndex>
+            <a:facetOrderIndex>0</a:facetOrderIndex>
+        </a:fieldCfg>
+        <a:fieldCfg name="Sprint ID">
+            <a:sourceRef>sprintId</a:sourceRef>
+            <a:isSortable>false</a:isSortable>
+            <a:isSearchable>false</a:isSearchable>
+            <a:isFacet>true</a:isFacet>
+            <a:facetType>CUSTOM_BUCKETS_CLOSED</a:facetType>
+            <a:isExclusiveFacet>true</a:isExclusiveFacet>
+            <a:facetLabelExpr>=&quot;Sprint ID&quot;</a:facetLabelExpr>
+            <a:facetOption>
+                <a:labelExpr>=&quot;Mobility&quot;</a:labelExpr>
+                <a:facetOperator>IN</a:facetOperator>
+                <a:values>1</a:values>
+            </a:facetOption>
+            <a:facetOption>
+                <a:labelExpr>=&quot;Tempo UI&quot;</a:labelExpr>
+                <a:facetOperator>IN</a:facetOperator>
+                <a:values>2</a:values>
+            </a:facetOption>
+            <a:facetOption>
+                <a:labelExpr>=&quot;Records&quot;</a:labelExpr>
+                <a:facetOperator>IN</a:facetOperator>
+                <a:values>4</a:values>
+            </a:facetOption>
+            <a:sortOrderIndex>1</a:sortOrderIndex>
+            <a:facetOrderIndex>1</a:facetOrderIndex>
+        </a:fieldCfg>
+        <a:detailViewCfg>
+            <a:nameExpr>=&quot;Summary&quot;</a:nameExpr>
+            <a:uiExpr>=#&quot;_a-0000d566-475b-8000-345d-010000010000_614&quot;()</a:uiExpr>
+            <a:visibilityExpr>=true()</a:visibilityExpr>
+            <a:urlStub>summary</a:urlStub>
+        </a:detailViewCfg>
+        <a:defaultSortInfo>
+            <field>desc</field>
+            <ascending>true</ascending>
+        </a:defaultSortInfo>
+        <a:isSystem>false</a:isSystem>
+        <a:security>16383</a:security>
+    </recordType>
+    <roleMap>
+        <role name="record_type_viewer">
+            <users/>
+            <groups>
+                <groupUuid>SYSTEM_GROUP_ROLE_APPLICATION_USERS</groupUuid>
+            </groups>
+        </role>
+        <role name="record_type_auditor">
+            <users/>
+            <groups>
+                <groupUuid>SYSTEM_GROUP_ROLE_APPLICATION_USERS</groupUuid>
+            </groups>
+        </role>
+    </roleMap>
+</recordTypeHaul>

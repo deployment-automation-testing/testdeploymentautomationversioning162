@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<dataStoreHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <dataStore>
+        <uuid>_a-0000d570-2b75-8000-2728-820000820000_2081</uuid>
+        <name>Records</name>
+        <description></description>
+        <dataSourceKey>jdbc/AppianAnywhere</dataSourceKey>
+        <adaptingExplicitSqlNames>false</adaptingExplicitSqlNames>
+        <entities>
+            <entity>
+                <uuid>b285c4ed-eac8-49c5-8507-cdeb75366164</uuid>
+                <name>Commit</name>
+                <type>{http://cilin03.appiancorp.com:8080/suite/types/}CommitSimple</type>
+            </entity>
+            <entity>
+                <uuid>2f899e27-ea35-455b-8f41-4471fbd5ae20</uuid>
+                <name>User Directory Entries</name>
+                <type>{UserDirectory}UserDirectoryEntry</type>
+            </entity>
+        </entities>
+    </dataStore>
+    <isPublished>false</isPublished>
+    <roleMap>
+        <role allowForAll="false" inherit="false" name="administrators">
+            <users/>
+            <groups/>
+        </role>
+        <role allowForAll="false" inherit="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role allowForAll="false" inherit="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+        <role allowForAll="false" inherit="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role allowForAll="false" inherit="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role allowForAll="true" inherit="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+</dataStoreHaul>

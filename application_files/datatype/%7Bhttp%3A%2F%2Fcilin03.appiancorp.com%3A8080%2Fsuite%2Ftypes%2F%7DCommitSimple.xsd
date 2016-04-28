@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema
+  targetNamespace="http://cilin03.appiancorp.com:8080/suite/types/"
+  xmlns:tns="http://cilin03.appiancorp.com:8080/suite/types/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:complexType name="CommitSimple">
+    <xsd:sequence>
+      <xsd:element name="id" type="xsd:int">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">
+            @Column(nullable=false)
+	    @Id
+            @GeneratedValue
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="desc" nillable="true" type="xsd:string"/>
+      <xsd:element name="sprintId" nillable="true" type="xsd:int"/>
+      <xsd:element name="percentComplete" nillable="true" type="xsd:int"/>
+      <xsd:element name="isStretch" nillable="true" type="xsd:boolean"/>
+      <xsd:element name="notes" nillable="true" type="xsd:string"/>
+      <xsd:element name="jiraLink" nillable="true" type="xsd:string"/>
+      <xsd:element name="featureOwner" nillable="true" type="xsd:int"/>
+      <xsd:element name="version" nillable="true" type="xsd:int"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

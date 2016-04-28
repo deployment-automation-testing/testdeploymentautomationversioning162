@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <rule>
+        <name>dynamic_PickerField</name>
+        <uuid>_a-0000d879-cf1c-8000-c717-010000010000_1505</uuid>
+        <description></description>
+        <parentUuid>_a-0000d84f-8704-8000-3c3b-010000010000_1561</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>= load(
+  local!pickerField_label: &quot;label&quot;,
+  local!pickerField_instructions: &quot;instructions&quot;,
+  local!pickerField_required: {2},
+  local!pickerField_readOnly: {2},
+  local!pickerField_disabled: {2},
+  local!pickerField_removeOnly: {2},
+  local!pickerField_validations,
+  local!pickerField_maxSelections: 5,
+  
+  /*TODO edit dynamically*/ 
+  local!pickerField_bookTitles: { &quot;The Lord of the Rings&quot;, &quot;The Hitchhiker's Guide to the Galaxy&quot;, &quot;Ender's Game&quot;, &quot;Dune&quot;, &quot;A Game of Thrones&quot;, &quot;1984&quot;, &quot;Fahrenheit 451&quot;, &quot;Foundation trilogy&quot;, &quot;Brave New World&quot;, &quot;American Gods&quot;, &quot;The Princess Bride&quot;, &quot;The Wheel of Time&quot;, &quot;Animal Farm&quot;, &quot;Neuromancer&quot;, &quot;Watchmen&quot;, &quot;I, Robot&quot;, &quot;Stranger in a Strange Land&quot;, &quot;The Name of the Wind (Kingkiller Chronicles)&quot;, &quot;Slaughterhouse-Five&quot;, &quot;Frankenstein&quot;, &quot;Do Androids Dream of Electric Sheep?&quot;, &quot;The Handmaid's Tale&quot;, &quot;The Dark Tower&quot;, &quot;2001: A Space Odyssey&quot;, &quot;The Stand&quot;, &quot;Snow Crash&quot;, &quot;The Martian Chronicles&quot;, &quot;Cat’s Cradle&quot;, &quot;The Sandman series&quot;, &quot;A Clockwork Orange&quot;, &quot;Starship Troopers&quot;, &quot;Watership Down&quot;, &quot;Dragonflight (Pern)&quot;, &quot;The Moon is a Harsh Mistress&quot;, &quot;A Canticle for Leibowitz&quot;, &quot;The Time Machine&quot;, &quot;Twenty Thousand Leagues Under the Sea&quot;, &quot;Flowers for Algernon&quot;, &quot;The War of the Worlds&quot;, &quot;Amber Chronicles&quot;, &quot;The Belgariad&quot;, &quot;The Mists of Avalon&quot;, &quot;Mistborn trilogy&quot;, &quot;Ringworld&quot;, &quot;The Left Hand of Darkness&quot;, &quot;The Silmarillion&quot;, &quot;The Once and Future King&quot;, &quot;Neverwhere&quot;, &quot;Childhood's End&quot;, &quot;Contact&quot;, &quot;Hyperion&quot;, &quot;Stardust&quot;, &quot;Cryptonomicon&quot;, &quot;World War Z: An Oral History of the Zombie War&quot;, &quot;The Last Unicorn&quot;, &quot;The Forever War&quot;, &quot;Small Gods&quot;, &quot;The Chronicles of Thomas Covenant, the Unbeliever&quot;, &quot;The Vorkosigan Saga&quot;, &quot;Going Postal&quot;, &quot;The Mote in God's Eye&quot;, &quot;The Sword of Truth&quot;, &quot;The Road&quot;, &quot;Jonathan Strange and Mr Norrell&quot;, &quot;I Am Legend&quot;, &quot;The Riftwar Saga&quot;, &quot;The Sword of Shannara Trilogy&quot;, &quot;Conan the Barbarian&quot;, &quot;The Farseer trilogy&quot;, &quot;The Time Traveler's Wife&quot;, &quot;The Way of Kings&quot;, &quot;A Journey To The Center Of The Earth&quot;, &quot;The Legend of Drizzt series&quot;, &quot;Old Man's War series&quot;, &quot;The Diamond Age&quot;, &quot;Rendezvous With Rama&quot;, &quot;Kushiel's Dart trilogy&quot;, &quot;The Dispossessed&quot;, &quot;Something Wicked This Way Comes&quot;, &quot;Wicked: The Life and Times of the Wicked Witch of the West&quot;, &quot;The Malazan Book Of The Fallen series&quot;, &quot;The Eyre Affair&quot;, &quot;The Culture series&quot;, &quot;The Crystal Cave&quot;, &quot;Anathem&quot;, &quot;The Codex Alera&quot;, &quot;The Book of the New Sun&quot;, &quot;The Thrawn trilogy&quot;, &quot;Outlander series&quot;, &quot;The Elric saga&quot;, &quot;The Illustrated Man&quot;, &quot;Sunshine&quot;, &quot;A Fire Upon the Deep&quot;, &quot;The Caves of Steel&quot;, &quot;The Mars trilogy&quot;, &quot;Lucifer's Hammer&quot;, &quot;Doomsday Book&quot;, &quot;Perdido Street Station&quot;, &quot;The Xanth series&quot;, &quot;The Space trilogy&quot; },
+  
+  with(
+		/*TODO using released lamba expression*/ 
+		local!pickerField_searchBookTitles: lambda_appian_internal(
+		  ri!filter,
+		  with(
+			local!results: local!filterArray(ri!filter, local!pickerField_bookTitles),
+			'type!{http://www.appian.com/ae/types/2009}DataSubset'(data: local!results, identifiers: local!results)
+		  )
+		),
+		#&quot;SYSTEM_SYSRULES_sectionLayoutColumns&quot;(
+          label: &quot;Dynamic Sail Component&quot;,
+          columns: {
+            #&quot;SYSTEM_SYSRULES_columnLayout&quot;(
+              contents: {
+                #&quot;SYSTEM_SYSRULES_textField&quot;(
+                  label: &quot;Label&quot;,
+                  instructions: &quot;Enter text for the dynamic Label value&quot;,
+                  required: false,
+                  readOnly: false,
+                  disabled: false,
+                  value: local!pickerField_label,
+                  saveInto: local!pickerField_label
+                ),
+                #&quot;SYSTEM_SYSRULES_textField&quot;(
+                  label: &quot;Instructions&quot;,
+                  instructions: &quot;Enter text for the dynamic Instructions value&quot;,
+                  required: false,
+                  readOnly: false,
+                  disabled: false,
+                  value: local!pickerField_instructions,
+                  saveInto: local!pickerField_instructions
+                ),
+                #&quot;SYSTEM_SYSRULES_radioButtonFieldByIndex&quot;(
+                  label: &quot;Required&quot;,
+                  instructions: &quot;Checked=true, Unchecked=false&quot;,
+                  required: false,
+                  disabled: false,
+                  choiceLabels: {
+                    &quot;True&quot;,
+                    &quot;False&quot;
+                  },
+                  value: local!pickerField_required,
+                  saveInto: local!pickerField_required
+                ),
+				#&quot;SYSTEM_SYSRULES_radioButtonFieldByIndex&quot;(
+                  label: &quot;ReadOnly&quot;,
+                  instructions: &quot;Checked=true, Unchecked=false&quot;,
+                  required: false,
+                  disabled: false,
+                  choiceLabels: {
+                    &quot;True&quot;,
+                    &quot;False&quot;
+                  },
+                  value: local!pickerField_readOnly,
+                  saveInto: local!pickerField_readOnly
+                ),
+				#&quot;SYSTEM_SYSRULES_radioButtonFieldByIndex&quot;(
+                  label: &quot;Disabled&quot;,
+                  instructions: &quot;Checked=true, Unchecked=false&quot;,
+                  required: false,
+                  disabled: false,
+                  choiceLabels: {
+                    &quot;True&quot;,
+                    &quot;False&quot;
+                  },
+                  value: local!pickerField_disabled,
+                  saveInto: local!pickerField_disabled
+                ),
+				#&quot;SYSTEM_SYSRULES_radioButtonFieldByIndex&quot;(
+                  label: &quot;Remove Only&quot;,
+                  instructions: &quot;Checked=true, Unchecked=false&quot;,
+                  required: false,
+                  disabled: false,
+                  choiceLabels: {
+                    &quot;True&quot;,
+                    &quot;False&quot;
+                  },
+                  value: local!pickerField_removeOnly,
+                  saveInto: local!pickerField_removeOnly
+                ),					
+                #&quot;SYSTEM_SYSRULES_textField&quot;(
+                  label: &quot;Value&quot;,
+                  instructions: &quot;Enter text for the dynamic Value value&quot;,
+                  required: false,
+                  readOnly: false,
+                  disabled: false,
+                  value: local!pickerField_validations,
+                  saveInto: local!pickerField_validations
+                ),
+				#&quot;SYSTEM_SYSRULES_textField&quot;(
+                  label: &quot;Max Selections&quot;,
+                  instructions: &quot;Enter integer for the dynamic Max Selections value&quot;,
+                  required: false,
+                  readOnly: false,
+                  disabled: false,
+                  value: local!pickerField_maxSelections,
+                  saveInto: tointeger(local!pickerField_maxSelections)
+                )
+				 
+              }
+            ),
+			#&quot;SYSTEM_SYSRULES_columnLayout&quot;(
+              contents: {
+			  
+				#&quot;SYSTEM_SYSRULES_pickerFieldCustom&quot;(
+				  label: local!pickerField_label,
+				  instructions: local!pickerField_instructions,
+				  required: if(local!pickerField_required=1,&quot;true&quot;,&quot;false&quot;),
+                  readOnly: if(local!pickerField_readOnly=1,&quot;true&quot;,&quot;false&quot;),
+                  disabled: if(local!pickerField_disabled=1,&quot;true&quot;,&quot;false&quot;),
+				  suggestFunction: local!pickerField_searchBookTitles,
+				  selectedLabels: local!pickerField_validations,				  
+				  value: local!pickerField_validations,
+				  saveInto: local!pickerField_validations
+				)			  
+
+			  }
+			)
+          }
+        )
+      
+    
+  )
+)</definition>
+        <preferredEditor>legacy</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role allowForAll="false" inherit="true" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role allowForAll="false" inherit="true" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role allowForAll="false" inherit="true" name="administrators">
+            <users>
+                <userUuid>Administrator</userUuid>
+            </users>
+            <groups/>
+        </role>
+        <role allowForAll="false" inherit="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role allowForAll="false" inherit="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role allowForAll="false" inherit="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+</contentHaul>

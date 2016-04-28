@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <rule>
+        <name>dynamic_ProcessTaskLink</name>
+        <uuid>_a-0000d84f-8704-8000-3c3b-010000010000_1572</uuid>
+        <description></description>
+        <parentUuid>_a-0000d84f-8704-8000-3c3b-010000010000_1561</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>= load(
+
+	local!processTaskLink_task: 1,
+	local!processTaskLink_label: &quot;ProcessTaskLink&quot;,
+  	
+	with(		
+		#&quot;SYSTEM_SYSRULES_sectionLayoutColumns&quot;(
+          label: &quot;Dynamic Sail Component&quot;,
+          columns: {
+				#&quot;SYSTEM_SYSRULES_columnLayout&quot;(
+				  contents: {                
+					#&quot;SYSTEM_SYSRULES_textField&quot;(
+				  label: &quot;ProcessTaskLink Task id&quot;,
+				  instructions: &quot;Enter text for the dynamic ProcessTaskLink Task id value&quot;,
+				  required: false,
+				  readOnly: false,
+				  disabled: false,
+				  value: local!processTaskLink_task,
+				  saveInto: local!processTaskLink_task
+				),
+				#&quot;SYSTEM_SYSRULES_textField&quot;(
+				  label: &quot;ProcessTaskLink Label&quot;,
+				  instructions: &quot;Enter text for the dynamic ProcessTaskLink Label value&quot;,
+				  required: false,
+				  readOnly: false,
+				  disabled: false,
+				  value: local!processTaskLink_label,
+				  saveInto: local!processTaskLink_label
+				)  		
+			  }
+            ),
+			#&quot;SYSTEM_SYSRULES_columnLayout&quot;(
+              contents: {
+
+				'type!{http://www.appian.com/ae/types/2009}AnyLinkField'(
+					label: &quot;&quot;,
+					instructions: &quot;&quot;,
+					links: {					
+						#&quot;SYSTEM_SYSRULES_processTaskLink&quot;(
+							task: if(local!processTaskLink_task=&quot;null&quot;,null(),toInteger(local!processTaskLink_task)),
+							label: if(local!processTaskLink_label=&quot;null&quot;,null(),local!processTaskLink_label)
+						)  				
+					},
+					labelPosition: &quot;ADJACENT&quot;							
+					)				
+				}
+			)
+          }
+        )
+      
+    
+  )
+)</definition>
+        <preferredEditor>legacy</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role allowForAll="false" inherit="true" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role allowForAll="false" inherit="true" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role allowForAll="false" inherit="true" name="administrators">
+            <users>
+                <userUuid>Administrator</userUuid>
+            </users>
+            <groups/>
+        </role>
+        <role allowForAll="false" inherit="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role allowForAll="false" inherit="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role allowForAll="false" inherit="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+</contentHaul>

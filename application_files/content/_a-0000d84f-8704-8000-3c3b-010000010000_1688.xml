@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <rule>
+        <name>dynamic_CheckBoxField</name>
+        <uuid>_a-0000d84f-8704-8000-3c3b-010000010000_1688</uuid>
+        <description></description>
+        <parentUuid>_a-0000d84f-8704-8000-3c3b-010000010000_1561</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>= load(
+  local!checkBoxField_label: &quot;label&quot;,
+  local!checkBoxField_instructions: &quot;instructions&quot;,
+  local!checkBoxField_required: {
+    2
+  },
+  local!checkBoxField_disabled: {
+    2
+  },
+  local!checkBoxField_choiceLabels: &quot;[Choice 1][Choice 2][Choice 3][Choice 4]&quot;,
+  local!checkBoxField_value: {
+    1  
+  },
+  with(
+    #&quot;SYSTEM_SYSRULES_sectionLayoutColumns&quot;(
+      label: &quot;Dynamic Sail Component&quot;,
+      columns: {
+        #&quot;SYSTEM_SYSRULES_columnLayout&quot;(
+          contents: {
+            #&quot;SYSTEM_SYSRULES_textField&quot;(
+              label: &quot;Label&quot;,
+              instructions: &quot;Enter text for the dynamic Label value&quot;,
+              required: false,
+              readOnly: false,
+              disabled: false,
+              value: local!checkBoxField_label,
+              saveInto: local!checkBoxField_label
+            ),
+            #&quot;SYSTEM_SYSRULES_textField&quot;(
+              label: &quot;Instructions&quot;,
+              instructions: &quot;Enter text for the dynamic Instructions value&quot;,
+              required: false,
+              readOnly: false,
+              disabled: false,
+              value: local!checkBoxField_instructions,
+              saveInto: local!checkBoxField_instructions
+            ),
+            #&quot;SYSTEM_SYSRULES_radioButtonFieldByIndex&quot;(
+              label: &quot;Required&quot;,
+              instructions: &quot;Checked=true, Unchecked=false&quot;,
+              required: false,
+              disabled: false,
+              choiceLabels: {
+                &quot;True&quot;,
+                &quot;False&quot;
+              },
+              value: local!checkBoxField_required,
+              saveInto: local!checkBoxField_required
+            ),
+            #&quot;SYSTEM_SYSRULES_radioButtonFieldByIndex&quot;(
+              label: &quot;Disabled&quot;,
+              instructions: &quot;Checked=true, Unchecked=false&quot;,
+              required: false,
+              disabled: false,
+              choiceLabels: {
+                &quot;True&quot;,
+                &quot;False&quot;
+              },
+              value: local!checkBoxField_disabled,
+              saveInto: local!checkBoxField_disabled
+            ),
+            #&quot;SYSTEM_SYSRULES_textField&quot;(
+              label: &quot;Choice Labels&quot;,
+              instructions: &quot;Enter choices in boxes [], eg. [choice5][choice6][etc..]&quot;,
+              required: false,
+              readOnly: false,
+              disabled: false,
+              value: local!checkBoxField_choiceLabels,
+              saveInto: local!checkBoxField_choiceLabels
+            ),
+            #&quot;SYSTEM_SYSRULES_textField&quot;(
+              label: &quot;Value&quot;,
+              instructions: &quot;Enter number of pre-selected choice for the dynamic Value value&quot;,
+              required: false,
+              readOnly: false,
+              disabled: false,
+              value: local!checkBoxField_value,
+              saveInto: local!checkBoxField_value
+            )
+          }
+        ),
+        #&quot;SYSTEM_SYSRULES_columnLayout&quot;(
+          contents: {
+            #&quot;SYSTEM_SYSRULES_checkboxFieldByIndex&quot;(
+              label: local!checkBoxField_label,
+              instructions: local!checkBoxField_instructions,
+              required: if(
+                local!checkBoxField_required = 1,
+                &quot;true&quot;,
+                &quot;false&quot;
+              ),
+              disabled: if(
+                local!checkBoxField_disabled = 1,
+                &quot;true&quot;,
+                &quot;false&quot;
+              ),
+              choiceLabels: extract(local!checkBoxField_choiceLabels,&quot;[&quot;,&quot;]&quot;),
+              value: local!checkBoxField_value,
+              saveInto: local!checkBoxField_value
+            )
+          }
+        )
+      }
+    )
+  )
+)</definition>
+        <preferredEditor>legacy</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role allowForAll="false" inherit="true" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role allowForAll="false" inherit="true" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role allowForAll="false" inherit="true" name="administrators">
+            <users>
+                <userUuid>Administrator</userUuid>
+            </users>
+            <groups/>
+        </role>
+        <role allowForAll="false" inherit="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role allowForAll="false" inherit="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role allowForAll="false" inherit="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+</contentHaul>

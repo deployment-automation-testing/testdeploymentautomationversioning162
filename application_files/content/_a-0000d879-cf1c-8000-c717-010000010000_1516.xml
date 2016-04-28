@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <rule>
+        <name>dynamic_sail_expression_test</name>
+        <uuid>_a-0000d879-cf1c-8000-c717-010000010000_1516</uuid>
+        <description></description>
+        <parentUuid>_a-0000d84f-8704-8000-3c3b-010000010000_1554</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>= load(  
+	
+	local!documentDownloadLink_documentToSearchFor1: &quot;large-image&quot;,  
+	local!documentDownloadLink_label1: local!documentDownloadLink_documentToSearchFor1,
+
+	local!documentDownloadLink_documentToSearchFor2: &quot;elefantastiff &quot;,  
+	local!documentDownloadLink_label2: local!documentDownloadLink_documentToSearchFor2,
+
+	local!documentDownloadLink_documentToSearchFor3: &quot;test1&quot;,  
+	local!documentDownloadLink_label3: local!documentDownloadLink_documentToSearchFor3,
+	
+	local!documentDownloadLink_documentToSearchFor4: &quot;test2&quot;,  
+	local!documentDownloadLink_label4: local!documentDownloadLink_documentToSearchFor4,
+	
+	local!documentDownloadLink_documentToSearchFor5: &quot;test3&quot;,  
+	local!documentDownloadLink_label5: local!documentDownloadLink_documentToSearchFor5,
+	
+  
+	with(
+	
+		local!documentDownloadLink_document1: finddocumentsbyname(true, local!documentDownloadLink_documentToSearchFor1),		
+		local!documentDownloadLink_document2: finddocumentsbyname(true, local!documentDownloadLink_documentToSearchFor2),
+		local!documentDownloadLink_document3: finddocumentsbyname(true, local!documentDownloadLink_documentToSearchFor3),
+		local!documentDownloadLink_document4: finddocumentsbyname(true, local!documentDownloadLink_documentToSearchFor4),
+		local!documentDownloadLink_document5: finddocumentsbyname(true, local!documentDownloadLink_documentToSearchFor5),
+			
+
+		
+		local!documentDownloadLink1: { 
+			/*-TODO- need to change to a!type */ 'type!{http://www.appian.com/ae/types/2009}DocumentDownloadLink'( 
+				document: local!documentDownloadLink_document1, 
+				label: local!documentDownloadLink_label1			
+			)  
+		},
+		local!documentDownloadLink2: { 
+			/*-TODO- need to change to a!type */ 'type!{http://www.appian.com/ae/types/2009}DocumentDownloadLink'( 
+				document: local!documentDownloadLink_document2, 
+				label: local!documentDownloadLink_label2			
+			)  
+		},
+		local!documentDownloadLink3: { 
+			/*-TODO- need to change to a!type */ 'type!{http://www.appian.com/ae/types/2009}DocumentDownloadLink'( 
+				document: local!documentDownloadLink_document3, 
+				label: local!documentDownloadLink_label3			
+			)  
+		},
+		local!documentDownloadLink4: { 
+			/*-TODO- need to change to a!type */ 'type!{http://www.appian.com/ae/types/2009}DocumentDownloadLink'( 
+				document: local!documentDownloadLink_document4, 
+				label: local!documentDownloadLink_label4			
+			)  
+		},
+		local!documentDownloadLink5: { 
+			/*-TODO- need to change to a!type */ 'type!{http://www.appian.com/ae/types/2009}DocumentDownloadLink'( 
+				document: local!documentDownloadLink_document5, 
+				label: local!documentDownloadLink_label5			
+			)  
+		},
+		
+			
+			
+		/*===== The Section Layout =====*/
+		#&quot;SYSTEM_SYSRULES_sectionLayoutColumns&quot;(
+		  label: &quot;Dynamic Sail Component&quot;,
+		  columns: {
+			#&quot;SYSTEM_SYSRULES_columnLayout&quot;(
+			  contents: {						
+				#&quot;SYSTEM_SYSRULES_textField&quot;(
+				  label: &quot;DocumentDownloadLink Document 1&quot;,
+				  instructions: &quot;Enter name of document, logic will return first document matching name&quot;,
+				  required: false,
+				  readOnly: false,
+				  disabled: false,
+				  value: local!documentDownloadLink_documentToSearchFor1,
+				  saveInto: local!documentDownloadLink_documentToSearchFor1
+				),
+				#&quot;SYSTEM_SYSRULES_textField&quot;(
+				  label: &quot;DocumentDownloadLink Document 2&quot;,
+				  instructions: &quot;Enter name of document, logic will return first document matching name&quot;,
+				  required: false,
+				  readOnly: false,
+				  disabled: false,
+				  value: local!documentDownloadLink_documentToSearchFor2,
+				  saveInto: local!documentDownloadLink_documentToSearchFor2
+				),
+				#&quot;SYSTEM_SYSRULES_textField&quot;(
+				  label: &quot;DocumentDownloadLink Document 3&quot;,
+				  instructions: &quot;Enter name of document, logic will return first document matching name&quot;,
+				  required: false,
+				  readOnly: false,
+				  disabled: false,
+				  value: local!documentDownloadLink_documentToSearchFor3,
+				  saveInto: local!documentDownloadLink_documentToSearchFor3
+				),
+				#&quot;SYSTEM_SYSRULES_textField&quot;(
+				  label: &quot;DocumentDownloadLink Document 4&quot;,
+				  instructions: &quot;Enter name of document, logic will return first document matching name&quot;,
+				  required: false,
+				  readOnly: false,
+				  disabled: false,
+				  value: local!documentDownloadLink_documentToSearchFor4,
+				  saveInto: local!documentDownloadLink_documentToSearchFor4
+				),
+				#&quot;SYSTEM_SYSRULES_textField&quot;(
+				  label: &quot;DocumentDownloadLink Document 5&quot;,
+				  instructions: &quot;Enter name of document, logic will return first document matching name&quot;,
+				  required: false,
+				  readOnly: false,
+				  disabled: false,
+				  value: local!documentDownloadLink_documentToSearchFor5,
+				  saveInto: local!documentDownloadLink_documentToSearchFor5
+				)
+				
+		
+			  }
+			),
+	
+			
+			/*===== THE DYNAMIC VARIABLE =====*/
+			#&quot;SYSTEM_SYSRULES_columnLayout&quot;(
+				contents: {
+				
+				
+				#&quot;SYSTEM_SYSRULES_gridField&quot;(				
+					label: &quot;Grid Field Label&quot;, 
+					instructions: &quot;Grid Field Instructions&quot;,
+					totalCount: 5,
+					columns: #&quot;SYSTEM_SYSRULES_gridTextColumn&quot;(
+					  label: &quot;Grid Text Column Label&quot;,
+					  field:&quot;title&quot;,
+					  data: {
+					  
+					  local!documentDownloadLink_documentToSearchFor1,
+					  local!documentDownloadLink_documentToSearchFor2,
+					  local!documentDownloadLink_documentToSearchFor3,
+					  local!documentDownloadLink_documentToSearchFor4,
+					  local!documentDownloadLink_documentToSearchFor5			  
+					  
+					  
+					  },
+					  alignment: &quot;LEFT&quot;,
+					  links: {
+					  
+					  local!documentDownloadLink1,
+					  local!documentDownloadLink2,
+					  local!documentDownloadLink3,
+					  local!documentDownloadLink4,
+					  local!documentDownloadLink5
+					  
+					  
+					  }
+					  
+					),
+
+				
+
+					
+					value: #&quot;SYSTEM_SYSRULES_pagingInfo&quot;(
+						startIndex: 1,
+						batchSize: 5),
+						sort: #&quot;SYSTEM_SYSRULES_sortInfo&quot;(
+							field: &quot;title&quot;,    
+							ascending: true		
+						)
+					
+										
+				)				
+			  										
+				
+			  
+				
+			  }
+			)
+		  }
+		)
+  )
+)</definition>
+        <preferredEditor>legacy</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role allowForAll="false" inherit="true" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role allowForAll="false" inherit="true" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role allowForAll="false" inherit="true" name="administrators">
+            <users>
+                <userUuid>Administrator</userUuid>
+            </users>
+            <groups/>
+        </role>
+        <role allowForAll="false" inherit="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role allowForAll="false" inherit="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role allowForAll="false" inherit="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+</contentHaul>

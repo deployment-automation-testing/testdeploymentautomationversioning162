@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <rule>
+        <name>dynamic_TextField</name>
+        <uuid>_a-0000d84f-8704-8000-3c3b-010000010000_1563</uuid>
+        <description></description>
+        <parentUuid>_a-0000d84f-8704-8000-3c3b-010000010000_1561</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>= load(
+  local!textField_label: &quot;label&quot;,
+  local!textField_instructions: &quot;instructions&quot;,
+  local!textField_required: {2},
+  local!textField_readOnly: {2},
+  local!textField_disabled: {2},
+  local!textField_refreshAfter: &quot;null&quot;,
+  local!textField_value: &quot;value&quot;,
+  with(
+		
+		#&quot;SYSTEM_SYSRULES_sectionLayoutColumns&quot;(
+          label: &quot;Dynamic Sail Component&quot;,
+          columns: {
+            #&quot;SYSTEM_SYSRULES_columnLayout&quot;(
+              contents: {
+                #&quot;SYSTEM_SYSRULES_textField&quot;(
+                  label: &quot;Label&quot;,
+                  instructions: &quot;Enter text for the dynamic Label value&quot;,
+                  required: false,
+                  readOnly: false,
+                  disabled: false,
+                  value: local!textField_label,
+                  saveInto: local!textField_label
+                ),
+                #&quot;SYSTEM_SYSRULES_textField&quot;(
+                  label: &quot;Instructions&quot;,
+                  instructions: &quot;Enter text for the dynamic Instructions value&quot;,
+                  required: false,
+                  readOnly: false,
+                  disabled: false,
+                  value: local!textField_instructions,
+                  saveInto: local!textField_instructions
+                ),
+                #&quot;SYSTEM_SYSRULES_radioButtonFieldByIndex&quot;(
+                  label: &quot;Required&quot;,
+                  instructions: &quot;Select the True, False, or Null() value&quot;,
+                  required: false,
+                  disabled: false,
+                  choiceLabels: {
+                    &quot;True&quot;,
+                    &quot;False&quot;,
+					&quot;Null&quot;
+                  },
+                  value: local!textField_required,
+                  saveInto: local!textField_required
+                ),
+				#&quot;SYSTEM_SYSRULES_radioButtonFieldByIndex&quot;(
+                  label: &quot;ReadOnly&quot;,
+                  instructions: &quot;Select the True, False, or Null() value&quot;,
+                  required: false,
+                  disabled: false,
+                  choiceLabels: {
+                    &quot;True&quot;,
+                    &quot;False&quot;,
+					&quot;Null&quot;
+                  },
+                  value: local!textField_readOnly,
+                  saveInto: local!textField_readOnly
+                ),
+				#&quot;SYSTEM_SYSRULES_radioButtonFieldByIndex&quot;(
+                  label: &quot;Disabled&quot;,
+                  instructions: &quot;Select the dynamic disabled value&quot;,
+                  required: false,
+                  disabled: false,
+                  choiceLabels: {
+                    &quot;True&quot;,
+                    &quot;False&quot;,
+					&quot;Null&quot;
+                  },
+                  value: local!textField_disabled,
+                  saveInto: local!textField_disabled
+                ),
+				#&quot;SYSTEM_SYSRULES_textField&quot;(
+                  label: &quot;Refresh After&quot;,
+                  instructions: &quot;Enter text for the dynamic refreshAfter value: (KEYPRESS, UNFOCUS, SUBMIT, null)&quot;,
+                  required: false,
+                  readOnly: false,
+                  disabled: false,
+                  value: local!textField_refreshAfter,
+                  saveInto: local!textField_refreshAfter
+                ),
+                #&quot;SYSTEM_SYSRULES_textField&quot;(
+                  label: &quot;Value&quot;,
+                  instructions: &quot;Enter text for the dynamic Value value&quot;,
+                  required: false,
+                  readOnly: false,
+                  disabled: false,
+                  value: local!textField_value,
+                  saveInto: local!textField_value
+                )
+				 
+              }
+            ),
+			#&quot;SYSTEM_SYSRULES_columnLayout&quot;(
+              contents: {
+			  
+			  #&quot;SYSTEM_SYSRULES_textField&quot;(
+                  label: local!textField_label,
+                  instructions: local!textField_instructions,
+                  required: if(local!textField_required=1,&quot;true&quot;,if(local!textField_required=2,&quot;false&quot;,null())),
+                  readOnly: if(local!textField_readOnly=1,&quot;true&quot;,if(local!textField_readOnly=2,&quot;false&quot;,null())),
+                  disabled: if(local!textField_disabled=1,&quot;true&quot;,if(local!textField_disabled=2,&quot;false&quot;,null())),
+				  refreshAfter: if(local!textField_refreshAfter=&quot;null&quot;,null(),local!textField_refreshAfter),
+                  value: local!textField_value,
+                  saveInto: local!textField_value
+                )
+			  
+
+			  }
+			)
+          }
+        )
+      
+    
+  )
+)</definition>
+        <preferredEditor>legacy</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role allowForAll="false" inherit="true" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role allowForAll="false" inherit="true" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role allowForAll="false" inherit="true" name="administrators">
+            <users>
+                <userUuid>Administrator</userUuid>
+            </users>
+            <groups/>
+        </role>
+        <role allowForAll="false" inherit="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role allowForAll="false" inherit="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role allowForAll="false" inherit="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+</contentHaul>
