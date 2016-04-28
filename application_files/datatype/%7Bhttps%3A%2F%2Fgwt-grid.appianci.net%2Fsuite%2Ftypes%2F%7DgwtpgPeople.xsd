@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="https://gwt-grid.appianci.net/suite/types/"
+  xmlns:tns="https://gwt-grid.appianci.net/suite/types/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:complexType name="gwtpgPeople">
+    <xsd:sequence>
+      <xsd:element name="fName" nillable="true" type="xsd:string"/>
+      <xsd:element name="lName" nillable="true" type="xsd:string"/>
+      <xsd:element name="uName" nillable="true" type="xsd:string">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">@Id</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="eMail" nillable="true" type="xsd:string"/>
+      <xsd:element name="Date" nillable="true" type="xsd:date"/>
+      <xsd:element name="DateTime" nillable="true" type="xsd:dateTime"/>
+      <xsd:element name="Number" nillable="true" type="xsd:int"/>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="TextMulti"
+        nillable="true" type="xsd:string"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

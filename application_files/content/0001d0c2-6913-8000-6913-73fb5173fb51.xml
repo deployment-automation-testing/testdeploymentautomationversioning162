@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
-    <rulesFolder>
-        <name>No DDL</name>
-        <uuid>_a-0000db6d-fe6f-8000-fb7f-010000010000_1609</uuid>
+    <rule>
+        <name>RandomDate</name>
+        <uuid>0001d0c2-6913-8000-6913-73fb5173fb51</uuid>
         <description></description>
-        <parentUuid>SYSTEM_RULES_ROOT</parentUuid>
+        <parentUuid>0000d0c2-713f-8000-6913-73fb5173fb51</parentUuid>
         <visibility>
             <advertise>false</advertise>
             <hierarchy>true</hierarchy>
@@ -14,7 +14,10 @@
             <system>false</system>
             <unlogged>false</unlogged>
         </visibility>
-    </rulesFolder>
+        <definition>=date(rand()*1000+1500, rand()*10+1, rand()*15+1)</definition>
+        <preferredEditor>legacy</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
     <roleMap public="true">
         <role allowForAll="false" inherit="true" name="readers">
             <users/>
@@ -25,9 +28,7 @@
             <groups/>
         </role>
         <role allowForAll="false" inherit="true" name="administrators">
-            <users>
-                <userUuid>Administrator</userUuid>
-            </users>
+            <users/>
             <groups/>
         </role>
         <role allowForAll="false" inherit="false" name="denyReaders">
