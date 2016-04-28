@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<recordTypeHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <recordType name="PM Backed Related Actions" a:uuid="4fc699f4-60cd-4ab3-966f-ec671d8a5681">
+        <a:pluralName>PM Backed Related Actions</a:pluralName>
+        <a:description>Test records with PM Related Actions</a:description>
+        <a:urlStub>pm-backed-related-actions</a:urlStub>
+        <a:source xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="a:ProcessModel" a:uuid="0007d6ed-fbd4-8000-f5a9-6b00006b0000"/>
+        <a:listViewTemplateExpr>#&quot;SYSTEM_SYSRULES_listViewItem&quot;(&#xD;
+  timestamp:rf!timestamp, &#xD;
+  image:rf!user, &#xD;
+  title:rf!name, &#xD;
+  details:rf!details&#xD;
+)</a:listViewTemplateExpr>
+        <a:detailViewCfg>
+            <a:nameExpr>=&quot;Summary&quot;</a:nameExpr>
+            <a:uiExpr>=#&quot;_a-0000d6e7-3d10-8000-7a63-680000680000_74&quot;()</a:uiExpr>
+            <a:visibilityExpr>=true()</a:visibilityExpr>
+            <a:urlStub>summary</a:urlStub>
+        </a:detailViewCfg>
+        <a:defaultSortInfo>
+            <field>name</field>
+            <ascending>true</ascending>
+        </a:defaultSortInfo>
+        <a:relatedActionCfg>
+            <a:target xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="a:ProcessModel" a:uuid="0003d6e6-388f-8000-373c-680000680000"/>
+            <a:contextExpr>=#&quot;_a-0001d719-1f22-8000-1f22-6b00006b0000_79&quot;()</a:contextExpr>
+            <a:visibilityExpr>=true()</a:visibilityExpr>
+            <a:refId>23275237-2d3c-48b1-b455-1964f144aa6b</a:refId>
+        </a:relatedActionCfg>
+        <a:relatedActionCfg>
+            <a:target xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="a:ProcessModel" a:uuid="0003d71e-9438-8000-3aa3-010000010000"/>
+            <a:contextExpr>=#&quot;_a-0001d719-1f22-8000-1f22-6b00006b0000_79&quot;()</a:contextExpr>
+            <a:visibilityExpr>=true()</a:visibilityExpr>
+            <a:refId>0cab73db-1206-439e-93d1-748adeaaeb30</a:refId>
+        </a:relatedActionCfg>
+        <a:relatedActionCfg>
+            <a:target xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="a:ProcessModel" a:uuid="0002d6ff-201a-8000-1e24-680000680000"/>
+            <a:contextExpr>=#&quot;_a-0001d719-1f22-8000-1f22-6b00006b0000_79&quot;()</a:contextExpr>
+            <a:visibilityExpr>=true()</a:visibilityExpr>
+            <a:refId>9616bb1c-8264-4fc5-972d-f3b12190be3c</a:refId>
+        </a:relatedActionCfg>
+        <a:relatedActionCfg>
+            <a:target xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="a:ProcessModel" a:uuid="0003d6ff-210c-8000-1e24-680000680000"/>
+            <a:contextExpr>=#&quot;_a-0001d719-1f22-8000-1f22-6b00006b0000_79&quot;()</a:contextExpr>
+            <a:visibilityExpr>=true()</a:visibilityExpr>
+            <a:refId>1d8f98ee-4652-46a9-9f07-7fa0f17fdd79</a:refId>
+        </a:relatedActionCfg>
+        <a:relatedActionCfg>
+            <a:target xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="a:ProcessModel" a:uuid="0003d71e-bbb5-8000-3aa3-010000010000"/>
+            <a:contextExpr>=#&quot;_a-0001d719-1f22-8000-1f22-6b00006b0000_79&quot;()</a:contextExpr>
+            <a:visibilityExpr>=true()</a:visibilityExpr>
+            <a:refId>261747a9-c5cd-46d9-99be-0d5d880b32a4</a:refId>
+        </a:relatedActionCfg>
+        <a:relatedActionCfg>
+            <a:target xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="a:ProcessModel" a:uuid="0002d6ff-203d-8000-1e24-680000680000"/>
+            <a:contextExpr>=#&quot;_a-0001d719-1f22-8000-1f22-6b00006b0000_79&quot;()</a:contextExpr>
+            <a:visibilityExpr>=true()</a:visibilityExpr>
+            <a:refId>f9c63985-ce20-46b4-b871-39ff0cf258e1</a:refId>
+        </a:relatedActionCfg>
+        <a:relatedActionCfg>
+            <a:target xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="a:ProcessModel" a:uuid="0002d72d-3b9e-8000-9293-010000010000"/>
+            <a:contextExpr>=#&quot;_a-0001d719-1f22-8000-1f22-6b00006b0000_79&quot;()</a:contextExpr>
+            <a:visibilityExpr>=true()</a:visibilityExpr>
+            <a:refId>3bcd76f7-08ec-4449-b15e-8b62df6678ac</a:refId>
+        </a:relatedActionCfg>
+        <a:isSystem>false</a:isSystem>
+        <a:security>16383</a:security>
+    </recordType>
+    <roleMap>
+        <role name="record_type_viewer">
+            <users/>
+            <groups>
+                <groupUuid>_e-0000d615-4c23-8000-da6f-010000010000_7</groupUuid>
+            </groups>
+        </role>
+    </roleMap>
+</recordTypeHaul>

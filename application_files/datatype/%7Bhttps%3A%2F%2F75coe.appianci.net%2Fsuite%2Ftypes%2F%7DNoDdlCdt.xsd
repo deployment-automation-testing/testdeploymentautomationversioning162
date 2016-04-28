@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="https://75coe.appianci.net/suite/types/"
+  xmlns:tns="https://75coe.appianci.net/suite/types/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:complexType name="NoDdlCdt">
+    <xsd:sequence>
+      <xsd:element name="text" nillable="true" type="xsd:string"/>
+      <xsd:element name="datetime" nillable="true" type="xsd:dateTime"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

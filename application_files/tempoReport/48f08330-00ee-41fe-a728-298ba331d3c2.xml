@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<tempoReportHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <tempoReport name="Dropdown Component" a:uuid="48f08330-00ee-41fe-a728-298ba331d3c2">
+        <a:description>Runtime equivalent to the mockups repository's component_dropdown.html</a:description>
+        <a:uiExpr>=#&quot;_a-0000d724-ee0d-8000-e7b0-010000010000_1079&quot;()</a:uiExpr>
+        <a:urlStub>dropdownField</a:urlStub>
+    </tempoReport>
+    <roleMap>
+        <role name="report_viewer">
+            <users/>
+            <groups>
+                <groupUuid>0001d0b7-c973-8000-c973-4e2a554e2a55</groupUuid>
+            </groups>
+        </role>
+    </roleMap>
+</tempoReportHaul>
