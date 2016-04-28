@@ -134,6 +134,18 @@
                     <type>site</type>
                     <uuids/>
                 </item>
+                <item>
+                    <type>adminSetting</type>
+                    <uuids/>
+                </item>
+                <item>
+                    <type>thirdPartyCredentials</type>
+                    <uuids/>
+                </item>
+                <item>
+                    <type>dataSource</type>
+                    <uuids/>
+                </item>
             </globalIdMap>
         </associatedObjects>
         <applicationNavigation/>
@@ -210,6 +222,18 @@
                 </item>
                 <item>
                     <type>site</type>
+                    <uuids/>
+                </item>
+                <item>
+                    <type>adminSetting</type>
+                    <uuids/>
+                </item>
+                <item>
+                    <type>thirdPartyCredentials</type>
+                    <uuids/>
+                </item>
+                <item>
+                    <type>dataSource</type>
                     <uuids/>
                 </item>
             </globalIdMap>
