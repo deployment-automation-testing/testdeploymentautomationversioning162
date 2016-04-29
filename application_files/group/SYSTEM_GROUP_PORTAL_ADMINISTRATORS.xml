@@ -12,7 +12,9 @@
         <attributes/>
     </group>
     <members>
-        <users/>
+        <users>
+            <userUuid>Administrator</userUuid>
+        </users>
         <groups/>
     </members>
     <admins>

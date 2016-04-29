@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<administeredSettingHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <uuid>conf.userStartPages.START_PAGES</uuid>
+    <isDefault>false</isDefault>
+    <urlConfigs>
+        <urlConfig>
+            <url>/tempo/reports/all</url>
+            <groups>
+                <group a:uuid="SYSTEM_GROUP_ROLE_DESIGNERS"/>
+            </groups>
+        </urlConfig>
+    </urlConfigs>
+</administeredSettingHaul>

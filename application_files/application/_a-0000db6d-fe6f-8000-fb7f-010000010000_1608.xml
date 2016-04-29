@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?><applicationHaul xmlns:a="http://www.appian.com/ae/types/2009">
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<applicationHaul xmlns:a="http://www.appian.com/ae/types/2009">
     <application>
         <name>Test Application - No DDL</name>
         <uuid>_a-0000db6d-fe6f-8000-fb7f-010000010000_1608</uuid>
-        <description/>
+        <description></description>
         <parentUuid>SYSTEM_APPLICATIONS_ROOT</parentUuid>
         <visibility>
             <advertise>false</advertise>
@@ -22,9 +23,6 @@
                     <type>datatype</type>
                     <uuids>
                         <uuid>{https://75coe.appianci.net/suite/types/}NoDdlCdt</uuid>
-                    <uuid>{https://gwt-grid.appianci.net/suite/types/}gwtpgPeople.xsd</uuid>
-                        <uuid>{https://gwt-grid.appianci.net/suite/types/}gwtpgEmployee.xsd</uuid>
-                        <uuid>{https://gwt-grid.appianci.net/suite/types/}gwtpgTextVariations.xsd</uuid>
                     </uuids>
                 </item>
                 <item>
@@ -65,9 +63,6 @@
                         <uuid>_a-0000d516-ce42-8000-11d1-010000010000_542</uuid>
                         <uuid>_a-0000d724-ee0d-8000-e7b0-010000010000_1079</uuid>
                         <uuid>_a-0000d6fd-7cb9-8000-7886-010000010000_951</uuid>
-                    <uuid>0000d0c2-713f-8000-6913-73fb5173fb51</uuid>
-                        <uuid>0001d0c2-6913-8000-6913-73fb5173fb51</uuid>
-                        <uuid>_a-0000d451-5c64-8000-ac7a-680000680000_1051</uuid>
                     </uuids>
                 </item>
                 <item>
@@ -107,9 +102,7 @@
                 </item>
                 <item>
                     <type>application</type>
-                    <uuids>
-                        <uuid>_a-0000db6d-fe6f-8000-fb7f-010000010000_1616</uuid>
-                    </uuids>
+                    <uuids/>
                 </item>
                 <item>
                     <type>tempoFeed</type>
@@ -139,18 +132,6 @@
                 </item>
                 <item>
                     <type>site</type>
-                    <uuids/>
-                </item>
-                <item>
-                    <type>adminSetting</type>
-                    <uuids/>
-                </item>
-                <item>
-                    <type>thirdPartyCredentials</type>
-                    <uuids/>
-                </item>
-                <item>
-                    <type>dataSource</type>
                     <uuids/>
                 </item>
             </globalIdMap>
@@ -229,18 +210,6 @@
                 </item>
                 <item>
                     <type>site</type>
-                    <uuids/>
-                </item>
-                <item>
-                    <type>adminSetting</type>
-                    <uuids/>
-                </item>
-                <item>
-                    <type>thirdPartyCredentials</type>
-                    <uuids/>
-                </item>
-                <item>
-                    <type>dataSource</type>
                     <uuids/>
                 </item>
             </globalIdMap>

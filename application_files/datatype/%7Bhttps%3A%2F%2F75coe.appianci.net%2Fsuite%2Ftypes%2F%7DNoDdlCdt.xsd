@@ -7,4 +7,4 @@
       <xsd:element name="datetime" nillable="true" type="xsd:dateTime"/>
     </xsd:sequence>
   </xsd:complexType>
-</xsd:schema> 
+</xsd:schema>

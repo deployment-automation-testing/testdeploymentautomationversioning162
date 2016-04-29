@@ -4,29 +4,33 @@ adminSetting conf.userStartPages.DEFAULT_START_PAGE "Default Start Page"
 adminSetting conf.userStartPages.START_PAGES "Start Pages"
 thirdPartyCredentials 1 b194111e-d269-4a46-b045-c0c82424136b "damtest"
 
+Referenced precedents that were not exported (1):
+group 6 SYSTEM_GROUP_ROLE_DESIGNERS
+
 Trace:
-2016-04-26 03:38:17.691 DEBUG adminSetting conf.plugins.ENCRYPTION_API_ACCESS_LIST Begin transport.
-2016-04-26 03:38:17.691 DEBUG adminSetting conf.plugins.ENCRYPTION_API_ACCESS_LIST Retrieving object data.
-2016-04-26 03:38:17.693 DEBUG adminSetting conf.plugins.ENCRYPTION_API_ACCESS_LIST Setting uuids of object references.
-2016-04-26 03:38:17.697 DEBUG adminSetting conf.plugins.ENCRYPTION_API_ACCESS_LIST Exporting binary resources.
-2016-04-26 03:38:17.697 DEBUG adminSetting conf.plugins.ENCRYPTION_API_ACCESS_LIST Serializing object to XML.
-2016-04-26 03:38:17.701 DEBUG adminSetting conf.plugins.ENCRYPTION_API_ACCESS_LIST Object transported.
-2016-04-26 03:38:17.702 DEBUG adminSetting conf.userStartPages.DEFAULT_START_PAGE Begin transport.
-2016-04-26 03:38:17.702 DEBUG adminSetting conf.userStartPages.DEFAULT_START_PAGE Retrieving object data.
-2016-04-26 03:38:17.703 DEBUG adminSetting conf.userStartPages.DEFAULT_START_PAGE Setting uuids of object references.
-2016-04-26 03:38:17.706 DEBUG adminSetting conf.userStartPages.DEFAULT_START_PAGE Exporting binary resources.
-2016-04-26 03:38:17.706 DEBUG adminSetting conf.userStartPages.DEFAULT_START_PAGE Serializing object to XML.
-2016-04-26 03:38:17.706 DEBUG adminSetting conf.userStartPages.DEFAULT_START_PAGE Object transported.
-2016-04-26 03:38:17.706 DEBUG adminSetting conf.userStartPages.START_PAGES Begin transport.
-2016-04-26 03:38:17.706 DEBUG adminSetting conf.userStartPages.START_PAGES Retrieving object data.
-2016-04-26 03:38:17.709 DEBUG adminSetting conf.userStartPages.START_PAGES Setting uuids of object references.
-2016-04-26 03:38:17.709 DEBUG adminSetting conf.userStartPages.START_PAGES Exporting binary resources.
-2016-04-26 03:38:17.709 DEBUG adminSetting conf.userStartPages.START_PAGES Serializing object to XML.
-2016-04-26 03:38:17.71 DEBUG adminSetting conf.userStartPages.START_PAGES Object transported.
-2016-04-26 03:38:17.718 DEBUG thirdPartyCredentials 1 b194111e-d269-4a46-b045-c0c82424136b Begin transport.
-2016-04-26 03:38:17.718 DEBUG thirdPartyCredentials 1 b194111e-d269-4a46-b045-c0c82424136b Retrieving object data.
-2016-04-26 03:38:17.733 DEBUG thirdPartyCredentials 1 b194111e-d269-4a46-b045-c0c82424136b Setting uuids of object references.
-2016-04-26 03:38:17.743 DEBUG thirdPartyCredentials 1 b194111e-d269-4a46-b045-c0c82424136b Registering export properties.
-2016-04-26 03:38:17.745 DEBUG thirdPartyCredentials 1 b194111e-d269-4a46-b045-c0c82424136b Exporting binary resources.
-2016-04-26 03:38:17.745 DEBUG thirdPartyCredentials 1 b194111e-d269-4a46-b045-c0c82424136b Serializing object to XML.
-2016-04-26 03:38:17.746 DEBUG thirdPartyCredentials 1 b194111e-d269-4a46-b045-c0c82424136b Object transported.
+2016-04-26 03:50:07.795 DEBUG adminSetting conf.plugins.ENCRYPTION_API_ACCESS_LIST Begin transport.
+2016-04-26 03:50:07.795 DEBUG adminSetting conf.plugins.ENCRYPTION_API_ACCESS_LIST Retrieving object data.
+2016-04-26 03:50:07.798 DEBUG adminSetting conf.plugins.ENCRYPTION_API_ACCESS_LIST Setting uuids of object references.
+2016-04-26 03:50:07.798 DEBUG adminSetting conf.plugins.ENCRYPTION_API_ACCESS_LIST Exporting binary resources.
+2016-04-26 03:50:07.798 DEBUG adminSetting conf.plugins.ENCRYPTION_API_ACCESS_LIST Serializing object to XML.
+2016-04-26 03:50:07.799 DEBUG adminSetting conf.plugins.ENCRYPTION_API_ACCESS_LIST Object transported.
+2016-04-26 03:50:07.799 DEBUG adminSetting conf.userStartPages.DEFAULT_START_PAGE Begin transport.
+2016-04-26 03:50:07.799 DEBUG adminSetting conf.userStartPages.DEFAULT_START_PAGE Retrieving object data.
+2016-04-26 03:50:07.801 DEBUG adminSetting conf.userStartPages.DEFAULT_START_PAGE Setting uuids of object references.
+2016-04-26 03:50:07.801 DEBUG adminSetting conf.userStartPages.DEFAULT_START_PAGE Exporting binary resources.
+2016-04-26 03:50:07.801 DEBUG adminSetting conf.userStartPages.DEFAULT_START_PAGE Serializing object to XML.
+2016-04-26 03:50:07.801 DEBUG adminSetting conf.userStartPages.DEFAULT_START_PAGE Object transported.
+2016-04-26 03:50:07.801 DEBUG adminSetting conf.userStartPages.START_PAGES Begin transport.
+2016-04-26 03:50:07.801 DEBUG adminSetting conf.userStartPages.START_PAGES Retrieving object data.
+2016-04-26 03:50:07.814 DEBUG adminSetting conf.userStartPages.START_PAGES Setting uuids of object references.
+2016-04-26 03:50:07.82 DEBUG adminSetting conf.userStartPages.START_PAGES Processing reference: GroupRefImpl [id=6, uuid=SYSTEM_GROUP_ROLE_DESIGNERS]
+2016-04-26 03:50:08.046 DEBUG adminSetting conf.userStartPages.START_PAGES Exporting binary resources.
+2016-04-26 03:50:08.046 DEBUG adminSetting conf.userStartPages.START_PAGES Serializing object to XML.
+2016-04-26 03:50:08.08 DEBUG adminSetting conf.userStartPages.START_PAGES Object transported.
+2016-04-26 03:50:08.085 DEBUG thirdPartyCredentials 1 b194111e-d269-4a46-b045-c0c82424136b Begin transport.
+2016-04-26 03:50:08.085 DEBUG thirdPartyCredentials 1 b194111e-d269-4a46-b045-c0c82424136b Retrieving object data.
+2016-04-26 03:50:08.091 DEBUG thirdPartyCredentials 1 b194111e-d269-4a46-b045-c0c82424136b Setting uuids of object references.
+2016-04-26 03:50:08.091 DEBUG thirdPartyCredentials 1 b194111e-d269-4a46-b045-c0c82424136b Registering export properties.
+2016-04-26 03:50:08.091 DEBUG thirdPartyCredentials 1 b194111e-d269-4a46-b045-c0c82424136b Exporting binary resources.
+2016-04-26 03:50:08.091 DEBUG thirdPartyCredentials 1 b194111e-d269-4a46-b045-c0c82424136b Serializing object to XML.
+2016-04-26 03:50:08.091 DEBUG thirdPartyCredentials 1 b194111e-d269-4a46-b045-c0c82424136b Object transported.
