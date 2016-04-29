@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<thirdPartyCredentialsHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <externalSystem>
+        <a:uuid>b194111e-d269-4a46-b045-c0c82424136b</a:uuid>
+        <a:name>damtest</a:name>
+        <a:key>damtest</a:key>
+        <a:attribute>
+            <a:key>username</a:key>
+            <a:name>username</a:name>
+            <a:showValueOnUi>true</a:showValueOnUi>
+        </a:attribute>
+        <a:attribute>
+            <a:key>password</a:key>
+            <a:name>password</a:name>
+            <a:showValueOnUi>true</a:showValueOnUi>
+        </a:attribute>
+        <a:showPerUser>false</a:showPerUser>
+    </externalSystem>
+</thirdPartyCredentialsHaul>
